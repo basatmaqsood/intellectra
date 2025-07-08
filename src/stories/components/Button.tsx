@@ -4,7 +4,7 @@ import { ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 export interface LinkButtonProps {
-  path: string;
+  path?: string;
   variant?: 'primary' | 'secondary' | 'tertiary' | 'quaternary';
   target?: string;
   rel?: string;
@@ -43,8 +43,10 @@ export const LinkButton: React.FC<LinkButtonProps> = ({
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     if (onClick) {
       onClick(event);
-    } else {
+    } else if (path) {
       navigate(path);
+    } else{
+      console.log('No path or click function')
     }
   };
 

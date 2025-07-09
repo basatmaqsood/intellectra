@@ -1,72 +1,74 @@
 import type React from "react"
+import TrackRecordCard from "./TrackRecordCard"
 
 interface TrackRecordSectionProps {
     className?: string
 }
 
 const TrackRecordSection: React.FC<TrackRecordSectionProps> = ({ className = "" }) => {
+    const trackRecordData = [
+        { number: "120+", description: "Projects Delivered", numberColor: "text-accent2-400" },
+        { number: "45+", description: "Bid Won", numberColor: "text-white" },
+        { number: "99.7%", description: "On-Time Delivery Rate", numberColor: "text-accent1-500" },
+        { number: "15+", description: "In-House Engineers & Drafters", numberColor: "text-primary-400" }
+    ]
+
     return (
-        <section className={`w-full bg-black md:bg-[url('/images/about-bg.png')] md:bg-no-repeat md:bg-cover h-auto md:h-[994px] flex justify-center items-center py-32 md:py-0 ${className}`}>
-            <div className="w-full max-w-[95%] md:max-w-[80%] mx-auto px-2 md:px-8">
+        <section className={`w-full bg-black md:bg-[url('/images/about-bg.png')] md:bg-no-repeat md:bg-cover h-auto md:h-[994px] flex justify-center items-center py-20 md:py-0 ${className}`}>
+            <div className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-[75%] lg:max-w-[70%] mx-auto px-4 sm:px-6 md:px-8">
                 {/* Section Title */}
-                <h2 className="heading-2 text-[1.8rem] md:text-[4.5rem] text-center text-orange-500 mb-20 md:mb-28 uppercase">
+                <h2 className="heading-2  md:text-[3.5rem] lg:text-[4.5rem] text-center text-orange-500 mb-12 sm:mb-16 md:mb-20 lg:mb-28 uppercase font-bold">
                     Our Track Record
                 </h2>
 
                 {/* Track Record Grid */}
                 <div className="mb-10">
-                    {/* Mobile: Single column layout */}
-                    <div className="flex flex-col md:hidden space-y-4 max-w-[200px] mx-auto">
-                        {/* Projects Delivered */}
-                        <div className="border-2 border-gray-400 rounded-lg py-8 px-4 text-center">
-                            <div className="text-4xl font-bold text-white mb-2">120+</div>
-                            <div className="text-gray-300 text-sm">Projects Delivered</div>
-                        </div>
-
-                        {/* Bid Won */}
-                        <div className="border-2 border-gray-400 rounded-lg py-8 px-4 text-center">
-                            <div className="text-4xl font-bold text-white mb-2">45+</div>
-                            <div className="text-gray-300 text-sm">Bid Won</div>
-                        </div>
-
-                        {/* On-Time Delivery Rate */}
-                        <div className="border-2 border-blue-500 rounded-lg py-8 px-4 text-center">
-                            <div className="text-4xl font-bold text-white mb-2">99.7%</div>
-                            <div className="text-gray-300 text-sm">On-Time Delivery Rate</div>
-                        </div>
-
-                        {/* In-House Engineers */}
-                        <div className="border-2 border-gray-400 rounded-lg py-8 px-4 text-center">
-                            <div className="text-4xl font-bold text-white mb-2">15+</div>
-                            <div className="text-gray-300 text-sm">In-House Engineers & Drafters</div>
-                        </div>
+                    {/* Mobile: Single column layout (xs to sm) */}
+                    <div className="flex flex-col sm:hidden space-y-6 max-w-[180px] mx-auto">
+                        {trackRecordData.map((item, index) => (
+                            <TrackRecordCard
+                                key={index}
+                                number={item.number}
+                                description={item.description}
+                                numberColor={item.numberColor}
+                                numberSizeClass="text-3xl sm:text-4xl"
+                                descriptionSizeClass="body-text-sm"
+                                marginBottomClass="mb-3"
+                                className="py-8 px-6"
+                            />
+                        ))}
                     </div>
 
-                    {/* Desktop: 2x2 grid layout */}
-                    <div className="hidden md:grid md:grid-cols-2 md:gap-6 md:max-w-3xl md:mx-auto">
-                        {/* Projects Delivered */}
-                        <div className="border-2 border-gray-400 rounded-lg px-8 py-10 text-center">
-                            <div className="text-5xl font-bold text-white mb-3">120+</div>
-                            <div className="text-gray-300">Projects Delivered</div>
-                        </div>
+                    {/* Tablet: 2x2 grid layout (sm to md) */}
+                    <div className="hidden sm:grid md:hidden sm:grid-cols-2 sm:gap-6 sm:max-w-[500px] sm:mx-auto">
+                        {trackRecordData.map((item, index) => (
+                            <TrackRecordCard
+                                key={index}
+                                number={item.number}
+                                description={item.description}
+                                numberColor={item.numberColor}
+                                numberSizeClass="text-4xl"
+                                descriptionSizeClass="body-text-sm"
+                                marginBottomClass="mb-4"
+                                className="px-6 py-12"
+                            />
+                        ))}
+                    </div>
 
-                        {/* Bid Won */}
-                        <div className="border-2 border-gray-400 rounded-lg px-8 py-10 text-center">
-                            <div className="text-5xl font-bold text-white mb-3">45+</div>
-                            <div className="text-gray-300">Bid Won</div>
-                        </div>
-
-                        {/* On-Time Delivery Rate */}
-                        <div className="border-2 border-blue-500 rounded-lg px-8 py-10 text-center">
-                            <div className="text-5xl font-bold text-white mb-3">99.7%</div>
-                            <div className="text-gray-300">On-Time Delivery Rate</div>
-                        </div>
-
-                        {/* In-House Engineers */}
-                        <div className="border-2 border-gray-400 rounded-lg px-8 py-10 text-center">
-                            <div className="text-5xl font-bold text-white mb-3">15+</div>
-                            <div className="text-gray-300">In-House Engineers & Drafters</div>
-                        </div>
+                    {/* Desktop: 2x2 grid layout (md and up) */}
+                    <div className="hidden md:grid md:grid-cols-2 md:gap-10 lg:gap-16 md:max-w-[750px] lg:max-w-[900px] md:mx-auto">
+                        {trackRecordData.map((item, index) => (
+                            <TrackRecordCard
+                                key={index}
+                                number={item.number}
+                                description={item.description}
+                                numberColor={item.numberColor}
+                                numberSizeClass="text-5xl lg:text-6xl"
+                                descriptionSizeClass="text-base lg:text-lg"
+                                marginBottomClass="mb-4 lg:mb-6"
+                                className="px-12 py-12 lg:py-16"
+                            />
+                        ))}
                     </div>
                 </div>
             </div>

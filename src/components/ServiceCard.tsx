@@ -18,7 +18,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     const paddingClass = isMobile ? "py-4 px-4" : "py-4 md:py-6 lg:py-12  px-4 md:px-6 lg:px-8"
     const iconMarginClass = isMobile ? "mb-4" : "mb-6"
     const titleMarginClass = isMobile ? "mb-2" : "mb-4"
-    const titleSizeClass = isMobile ? "text-sm" : ""
+    const titleSizeClass = isMobile ? "body-text-sm" : ""
     const descriptionSizeClass = isMobile ? "" : ""
 
     return (

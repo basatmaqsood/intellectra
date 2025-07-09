@@ -2,6 +2,7 @@ import AboutSection from '../components/About'
 import HeroSection from '../components/Hero'
 import ServicesSection from '../components/Services'
 import TrackRecordSection from '../components/TrackRecord'
+import WhyChooseUsSection from '../components/WhyChooseUs'
 import { LinkButton } from '../stories/components/Button'
 
 const headlineData = {
@@ -38,6 +39,7 @@ function Home() {
     <AboutSection/>
     <ServicesSection/>
     <TrackRecordSection/>
+    <WhyChooseUsSection/>
     </>
   )
 }

@@ -1,5 +1,6 @@
 import AboutSection from '../components/About'
 import HeroSection from '../components/Hero'
+import ReviewsSection from '../components/Reviews'
 import ServicesSection from '../components/Services'
 import TrackRecordSection from '../components/TrackRecord'
 import WhyChooseUsSection from '../components/WhyChooseUs'
@@ -40,6 +41,7 @@ function Home() {
     <ServicesSection/>
     <TrackRecordSection/>
     <WhyChooseUsSection/>
+    <ReviewsSection/>
     </>
   )
 }

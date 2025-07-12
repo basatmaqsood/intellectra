@@ -82,7 +82,7 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
                 </div>
                 
                 {/* Copyright */}
-                <div className="border-t border-white/20 pt-6 sm:pt-8 text-center">
+                <div className=" pt-6 sm:pt-8 text-center">
                     <p className="body-text-sm text-white">
                         Copyright © 2025 LantroTech. All Rights Reserved
                     </p>

@@ -1,5 +1,5 @@
 import type React from "react"
-import { Icons } from "../assets/icons/icons";
+import { Icons } from "../../assets/icons/icons";
 import ServiceCard from "./ServiceCard";
 
 interface ServicesSectionProps {
@@ -36,7 +36,25 @@ const servicesData = [
 
 const ServicesSection: React.FC<ServicesSectionProps> = ({ className = "" }) => {
     return (
-        <section className={`w-full bg-black pb-0 md:bg-[url('/images/about-bg.png')] md:bg-no-repeat md:bg-cover h-auto md:h-[994px] flex justify-center items-center py-32 md:py-0 ${className}`}>
+        <section className={`relative w-full bg-black pb-0  md:bg-no-repeat md:bg-cover h-auto flex justify-center items-center py-32 md:py-0 ${className}`}>
+
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        {/* Orange gradient ball - bottom left */}
+        <div className="absolute bottom-0 left-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full -translate-x-2/4 -translate-y-10 blur-lg"
+             style={{
+               background: 'radial-gradient(circle at center, #F98328 0%, #Fa8f28 10%, #000000 100%)'
+             }}>
+        </div>
+        
+        {/* Teal gradient ball - top right */}
+        <div className="absolute top-0 right-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full translate-x-3/8 translate-y-10 blur-lg"
+             style={{
+               background: 'radial-gradient(circle at center, #7EC8C4 0%, #7EC8e4 10%, #000000 100%)'
+             }}>
+        </div>
+      </div>
+
             <div className="w-full max-w-[90%] md:max-w-[80%] mx-auto px-4 md:px-8">
                 {/* Section Title */}
                 <h2 className="heading-2 text-[1.8rem] md:text-[4.5rem] text-center text-primary-300 mb-20 md:mb-48 uppercase">
@@ -45,38 +63,17 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ className = "" }) => 
 
                 {/* Services Grid */}
                 <div className="mb-10">
-                    {/* Mobile: 2x2 grid for first 4 cards */}
-                    <div className="grid grid-cols-2 md:hidden mb-0 gap-8">
-                        {servicesData.slice(0, 4).map((service, index) => (
-                            <ServiceCard
-                                key={index}
-                                icon={service.icon}
-                                title={service.title}
-                                description={service.description}
-                                isMobile={true}
-                            />
-                        ))}
-                    </div>
-
-                    {/* Mobile: Centered 5th card */}
-                    <div className="md:hidden mt-8">
-                        <ServiceCard
-                            icon={servicesData[4].icon}
-                            title={servicesData[4].title}
-                            description={servicesData[4].description}
-                            className="mx-auto max-w-[50%]"
-                            isMobile={true}
-                        />
-                    </div>
-
-                    {/* Desktop: All 5 cards in single row */}
-                    <div className="hidden md:grid md:grid-cols-5 gap-0">
+                    {/* Single responsive grid for all breakpoints */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 place-items-center">
                         {servicesData.map((service, index) => (
                             <ServiceCard
                                 key={index}
                                 icon={service.icon}
                                 title={service.title}
                                 description={service.description}
+                                className={`w-full h-full max-w-[50%] sm:max-w-sm ${
+                                    index === 4 ? 'sm:col-start-1 sm:col-end-3 sm:justify-self-center sm:max-w-xs md:col-start-auto md:col-end-auto md:max-w-sm' : ''
+                                }`}
                                 isMobile={false}
                             />
                         ))}

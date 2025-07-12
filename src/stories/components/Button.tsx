@@ -1,7 +1,28 @@
 import React from 'react';
 import clsx from 'clsx';
-import { ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+
+// Custom Right Arrow SVG Component
+const RightArrow: React.FC<{ className?: string; size?: number }> = ({ 
+  className = '', 
+  size = 16 
+}) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 12 12"
+    fill="none"
+    className={className}
+  >
+    <path
+      d="M3 1l5 5-5 5"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
 export interface LinkButtonProps {
   path?: string;
@@ -57,7 +78,7 @@ export const LinkButton: React.FC<LinkButtonProps> = ({
     >
       <span className={`${showArrow ? 'flex items-center gap-2 leading-[0]' : ''}`}>
         <span>{children}</span>
-        {showArrow && <ChevronRight className='mt-[2px]' size={24} />}
+        {showArrow && <RightArrow className='' size={16} />}
       </span>
     </button>
   );

@@ -14,7 +14,26 @@ const TrackRecordSection: React.FC<TrackRecordSectionProps> = ({ className = "" 
     ]
 
     return (
-        <section className={`w-full bg-black md:bg-[url('/images/about-bg.png')] md:bg-no-repeat md:bg-cover h-auto md:h-[994px] flex justify-center items-center py-20 md:py-0 ${className}`}>
+        <section className={`relative w-full bg-black  h-auto flex justify-center items-center py-20 md:py-0 ${className}`}>
+
+
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        {/* Orange gradient ball - bottom left */}
+        <div className="absolute bottom-0 left-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full -translate-x-2/4 -translate-y-10 blur-lg"
+             style={{
+               background: 'radial-gradient(circle at center, #F98328 0%, #Fa8f28 10%, #000000 100%)'
+             }}>
+        </div>
+        
+        {/* Teal gradient ball - top right */}
+        <div className="absolute top-0 right-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full translate-x-3/8 translate-y-10 blur-lg"
+             style={{
+               background: 'radial-gradient(circle at center, #7EC8C4 0%, #7EC8e4 10%, #000000 100%)'
+             }}>
+        </div>
+      </div>
+
             <div className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-[75%] lg:max-w-[70%] mx-auto px-4 sm:px-6 md:px-8">
                 {/* Section Title */}
                 <h2 className="heading-2  md:text-[3.5rem] lg:text-[4.5rem] text-center text-orange-500 mb-12 sm:mb-16 md:mb-20 lg:mb-28 uppercase font-bold">

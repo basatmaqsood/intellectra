@@ -4,3 +4,7 @@
 @import './assets/themes/colors.css';
 
 @source "./src/**/*.{html,js,jsx,ts,tsx}";
+
+body {
+    background-color: black;
+}

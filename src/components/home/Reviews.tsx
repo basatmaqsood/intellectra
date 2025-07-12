@@ -34,7 +34,27 @@ const ReviewsSection: React.FC<ReviewsSectionProps> = ({ className = "" }) => {
     ]
 
     return (
-        <section className={`w-full bg-black md:bg-[url('/images/about-bg.png')] md:bg-no-repeat md:bg-cover py-16 sm:py-20 md:py-24 lg:py-32 ${className}`}>
+        <section className={`relative w-full bg-black py-16 sm:py-20 md:py-24 lg:py-32 ${className}`}>
+
+
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        {/* Orange gradient ball - bottom left */}
+        <div className="absolute bottom-0 left-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full -translate-x-2/4 -translate-y-10 blur-lg"
+             style={{
+               background: 'radial-gradient(circle at center, #F98328 0%, #Fa8f28 10%, #000000 100%)'
+             }}>
+        </div>
+        
+        {/* Teal gradient ball - top right */}
+        <div className="absolute top-0 right-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full translate-x-3/8 translate-y-10 blur-lg"
+             style={{
+               background: 'radial-gradient(circle at center, #7EC8C4 0%, #7EC8e4 10%, #000000 100%)'
+             }}>
+        </div>
+      </div>
+
+
             <div className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] mx-auto px-10 sm:px-14 md:px-20 lg:px-28 xl:px-32">
                 {/* Section Title */}
                 <h2 className="heading-2 text-center text-primary-300 mb-12 sm:mb-16 md:mb-20 lg:mb-24 uppercase font-bold">

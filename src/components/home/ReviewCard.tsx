@@ -36,7 +36,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
     }
 
     return (
-        <div className={`bg-transparent border border-white rounded-[35px] px-7 py-8 sm:px-9 sm:py-9 md:px-11 md:py-10 lg:px-13 lg:py-11 xl:px-14 h-full flex flex-col ${className}`}>
+        <div className={` bg-transparent border border-white rounded-[35px] px-7 py-8 sm:px-9 sm:py-9 md:px-11 md:py-10 lg:px-13 lg:py-11 xl:px-14 h-full flex flex-col ${className}`}>
             {/* Company Type and Rating */}
             <div className="flex items-start justify-between mb-4 sm:mb-5">
                 <h3 className="text-primary-300 heading-6">

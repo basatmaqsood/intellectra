@@ -9,6 +9,15 @@ import Coins from '../images/icons/Coins.png';
 import Carpenter from '../images/icons/Carpenter.png';
 import Documents from '../images/icons/Documents.png';
 import Transit from '../images/icons/Transit.png';
+import facebook from '../images/icons/facebook.png';
+import linkedin from '../images/icons/linkedin.png';
+import instagram from '../images/icons/instagram.png';
+import WhiteRight from '../images/icons/WhiteRight.png';
+import OrangeRight from '../images/icons/OrangeRight.png';
+
+
+
+
 
 
 export const Icons = {
@@ -22,4 +31,9 @@ export const Icons = {
   Carpenter: Carpenter,
   Documents: Documents,
   Transit: Transit,
+  facebook: facebook,
+  linkedin: linkedin,
+  instagram: instagram,
+  WhiteRight: WhiteRight,
+  OrangeRight: OrangeRight,
 };

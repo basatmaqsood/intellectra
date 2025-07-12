@@ -1,9 +1,12 @@
-import AboutSection from '../components/About'
+import AboutSection from '../components/home/About'
+import CTASection from '../components/CTA'
+import Footer from '../components/Footer'
 import HeroSection from '../components/Hero'
-import ReviewsSection from '../components/Reviews'
-import ServicesSection from '../components/Services'
-import TrackRecordSection from '../components/TrackRecord'
-import WhyChooseUsSection from '../components/WhyChooseUs'
+import HowItWorks from '../components/home/HowItWorks'
+import ReviewsSection from '../components/home/Reviews'
+import ServicesSection from '../components/home/Services'
+import TrackRecordSection from '../components/home/TrackRecord'
+import WhyChooseUsSection from '../components/home/WhyChooseUs'
 import { LinkButton } from '../stories/components/Button'
 
 const headlineData = {
@@ -41,7 +44,10 @@ function Home() {
     <ServicesSection/>
     <TrackRecordSection/>
     <WhyChooseUsSection/>
+    <HowItWorks/>
     <ReviewsSection/>
+    <CTASection/>
+    <Footer/>
     </>
   )
 }

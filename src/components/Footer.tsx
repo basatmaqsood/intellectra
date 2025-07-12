@@ -7,7 +7,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ className = "" }) => {
     return (
-        <footer className={`w-full bg-[#f98328] py-12 sm:py-12 md:py-20 lg:py-24 ${className}`}>
+        <footer className={`w-full bg-[#f98328] py-13 sm:py-13 lg:py-10 ${className}`}>
             <div className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] mx-auto px-10 sm:px-10 md:px-20 lg:px-28 xl:px-32">
                 {/* Main Footer Content */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 xl:gap-16 mb-12 sm:mb-16 md:mb-20">

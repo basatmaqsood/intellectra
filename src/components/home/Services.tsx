@@ -9,7 +9,7 @@ interface ServicesSectionProps {
 const servicesData = [
     {
         icon: Icons.MEP,
-        title: "MEP Estimation",
+        title: "M&P Estimation",
         description: "End-to-end cost forecasting for mechanical, electrical, and plumbing systems, backed by codes and construction realities."
     },
     {
@@ -36,10 +36,10 @@ const servicesData = [
 
 const ServicesSection: React.FC<ServicesSectionProps> = ({ className = "" }) => {
     return (
-        <section className={`relative overflow-hidden w-full bg-black pb-0  md:bg-no-repeat md:bg-cover h-auto flex justify-center items-center py-32 md:py-0 ${className}`}>
+        <section className={`relative overflow-hidden w-full  pb-18 sm:py-14 md:py-20 lg:py-28 xl:py-36 h-auto flex justify-center items-center ${className}`}>
 
       {/* Background Effects */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-[-1] overflow-hidden">
         {/* Orange gradient ball - bottom left */}
         <div className="absolute bottom-0 left-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full -translate-x-2/4 -translate-y-10 blur-lg"
              style={{
@@ -62,7 +62,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ className = "" }) => 
                 </h2>
 
                 {/* Services Grid */}
-                <div className="mb-10">
+                <div className="">
                     {/* Single responsive grid for all breakpoints */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 place-items-center">
                         {servicesData.map((service, index) => (

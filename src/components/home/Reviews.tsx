@@ -34,11 +34,11 @@ const ReviewsSection: React.FC<ReviewsSectionProps> = ({ className = "" }) => {
     ]
 
     return (
-        <section className={`relative overflow-hidden w-full bg-black py-16 sm:py-20 md:py-24 lg:py-32 ${className}`}>
+        <section className={`relative overflow-hidden w-full pb-9  py-9 sm:py-14 md:py-20 lg:py-24 xl:py-40 ${className}`}>
 
 
       {/* Background Effects */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-[-1] overflow-hidden">
         {/* Orange gradient ball - bottom left */}
         <div className="absolute bottom-0 left-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full -translate-x-2/4 -translate-y-10 blur-lg"
              style={{

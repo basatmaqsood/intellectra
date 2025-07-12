@@ -1,5 +1,5 @@
 import AboutSection from '../components/home/About'
-import CTASection from '../components/CTA'
+import CTASection from '../components/home/CTA'
 import Footer from '../components/Footer'
 import HeroSection from '../components/home/Hero'
 import HowItWorks from '../components/home/HowItWorks'

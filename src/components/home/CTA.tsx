@@ -1,5 +1,5 @@
 import type React from "react"
-import { LinkButton } from "../stories/components/Button"
+import { LinkButton } from "../../stories/components/Button"
 
 interface CTASectionProps {
     className?: string
@@ -7,7 +7,7 @@ interface CTASectionProps {
 
 const CTASection: React.FC<CTASectionProps> = ({ className = "" }) => {
     return (
-        <section className={`w-full bg-[#1e1005]  py-16 sm:py-20 md:py-24 lg:py-32 ${className}`}>
+        <section className={`w-full bg-[#1e1005] py-9 sm:py-14 md:py-20 lg:py-24 xl:py-28 ${className}`}>
             <div className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] mx-auto px-10 sm:px-14 md:px-20 lg:px-28 xl:px-32">
                 <div className="text-center">
                     {/* Main Heading */}

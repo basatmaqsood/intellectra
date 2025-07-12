@@ -62,12 +62,10 @@ const HowItWorks = () => {
   }, []);
 
   return (
-    <div className="relative bg-black overflow-hidden py-24 md:py-32" ref={containerRef}>
-      {/* Background blur elements - positioned exactly as in screenshot */}
-
-
+    <div className="relative overflow-hidden pb-18 sm:pb-14 md:pb-20 lg:pb-28 xl:pb-36  pt-2 md:pt-14 lg:pt-16 xl:pt-20 " ref={containerRef}>
+      
       {/* Background Effects */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-[-1] overflow-hidden">
         {/* Orange gradient ball - bottom left */}
         <div className="absolute bottom-0 left-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full -translate-x-2/4 -translate-y-10 blur-lg"
              style={{
@@ -82,9 +80,9 @@ const HowItWorks = () => {
              }}>
         </div>
       </div>
-
-
-
+      
+      
+      {/* Background blur elements - positioned exactly as in screenshot */}
       {/* Main content - centered */}
       <div className="relative z-10 container mx-auto px-4 md:px-8 flex flex-col items-center">
         {/* Header */}

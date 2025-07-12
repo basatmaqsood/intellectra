@@ -7,23 +7,23 @@ interface AboutUsSectionProps {
 
 const AboutUsSection: React.FC<AboutUsSectionProps> = ({ className = "" }) => {
     return (
-        <section className={`relative w-full bg-black overflow-hidden md:bg-no-repeat md:bg-cover h-auto flex justify-center items-center py-14 lg:py-32 md:py-0 ${className}`}>
-                  {/* Background Effects */}
-      <div className="absolute inset-0">
-        {/* Orange gradient ball - bottom left */}
-        <div className="absolute bottom-0 left-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full -translate-x-2/4 -translate-y-10 blur-lg"
-             style={{
-               background: 'radial-gradient(circle at center, #F98328 0%, #Fa8f28 10%, #000000 100%)'
-             }}>
-        </div>
-        
-        {/* Teal gradient ball - top right */}
-        <div className="absolute top-0 right-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full translate-x-3/8 translate-y-10 blur-lg"
-             style={{
-               background: 'radial-gradient(circle at center, #7EC8C4 0%, #7EC8e4 10%, #000000 100%)'
-             }}>
-        </div>
-      </div>
+        <section className={`relative w-full overflow-hidden flex justify-center items-center py-18 sm:py-14 md:py-24 lg:py-28 xl:py-36 ${className}`}>
+            {/* Background Effects */}
+            <div className="absolute inset-0 z-[-1] overflow-hidden">
+                {/* Orange gradient ball - bottom left */}
+                <div className="absolute bottom-0 left-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full -translate-x-2/4 -translate-y-10 blur-lg"
+                    style={{
+                        background: 'radial-gradient(circle at center, #F98328 0%, #Fa8f28 10%, #000000 100%)'
+                    }}>
+                </div>
+
+                {/* Teal gradient ball - top right */}
+                <div className="absolute top-0 right-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full translate-x-3/8 translate-y-10 blur-lg"
+                    style={{
+                        background: 'radial-gradient(circle at center, #7EC8C4 0%, #7EC8e4 10%, #000000 100%)'
+                    }}>
+                </div>
+            </div>
             <div className="w-full max-w-[90%] sm:max-w-[55%] mx-auto px-4 md:px-8">
                 {/* Section Title */}
                 <h2 className="heading-2 text-[1.8rem] md:text-[4.5rem] text-center text-primary-300 mb-10 md:mb-28 uppercase">
@@ -38,7 +38,7 @@ const AboutUsSection: React.FC<AboutUsSectionProps> = ({ className = "" }) => {
                             Turning Complexity into Clarity
                         </h3>
                         <p className="text-white body-text-sm  leading-relaxed text-center">
-INTELLECTRA is a specialized estimation and design firm helping builders, engineers, and project managers gain control over cost, time, and execution. With decades of combined technical experience, we deliver project-ready solutions that reduce guesswork and elevate quality.                        </p>
+                            INTELLECTRA is a specialized estimation and design firm helping builders, engineers, and project managers gain control over cost, time, and execution. With decades of combined technical experience, we deliver project-ready solutions that reduce guesswork and elevate quality.                        </p>
                     </div>
 
                     {/* Second Card - Smart Project Support */}

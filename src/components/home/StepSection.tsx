@@ -111,7 +111,7 @@ const StepSection = ({ step, index, isFirst, isLast }: StepSectionProps) => {
   return (
     <div 
       ref={sectionRef}
-      className="relative min-h-[250px] sm:min-h-[350px] md:min-h-[400px] lg:min-h-[450px] xl:min-h-[500px] mb-24 md:mb-32 last:mb-0"
+      className="relative min-h-[250px] sm:min-h-[350px] md:min-h-[500px] lg:min-h-[600px] xl:min-h-[700px] mb-24 md:mb-32 last:mb-0"
       style={{ height: 'auto' }}
     >
 

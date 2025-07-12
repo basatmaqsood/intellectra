@@ -82,7 +82,7 @@ const Headline: React.FC<HeadlineProps> = ({
   }, [lines, interval, animationDuration])
 
   return (
-    <h1 className={`text-white heading-2 max-w-[80%] mx-auto ${className}`}>
+    <h1 className={`text-white heading-2 max-w-[90%] mx-auto ${className}`}>
       {lines.map((line, lineIndex) => (
         <div key={lineIndex} className="block relative">
           {line.text.split('WORD_PLACEHOLDER').map((textPart, partIndex) => (

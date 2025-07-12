@@ -1,7 +1,7 @@
 import AboutSection from '../components/home/About'
 import CTASection from '../components/CTA'
 import Footer from '../components/Footer'
-import HeroSection from '../components/Hero'
+import HeroSection from '../components/home/Hero'
 import HowItWorks from '../components/home/HowItWorks'
 import ReviewsSection from '../components/home/Reviews'
 import ServicesSection from '../components/home/Services'
@@ -12,14 +12,24 @@ import { LinkButton } from '../stories/components/Button'
 const headlineData = {
     lines: [
       {
-        text: "ESTIMATES THAT EMPOWER,",
-        highlightedWords: [{ word: "EMPOWER", color: "text-primary-300" }],
+        text: "ESTIMATES THAT WORD_PLACEHOLDER",
+        highlightedWords: [
+          { word: "EMPOWER,", color: "text-primary-300" },
+          { word: "DELIVER,", color: "text-primary-300" },
+          { word: "CLARIFY,", color: "text-primary-300" },
+        ],
       },
       {
-        text: "DESIGNS THAT INSPIRE.",
-        highlightedWords: [{ word: "INSPIRE", color: "text-primary-300" }],
+        text: " DESIGNS THAT  WORD_PLACEHOLDER",
+        highlightedWords: [
+          { word: "INSPIRE.", color: "text-primary-300" },
+          { word: "ELEVATE.", color: "text-primary-300" },
+          { word: "GROW.", color: "text-primary-300" },
+        ],
       },
     ],
+    interval: 3000,          // Time between word changes (3 seconds)
+    animationDuration: 0.5   // Duration of each animation (0.5 seconds)
   }
 
   const taglineData = {

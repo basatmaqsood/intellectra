@@ -14,7 +14,7 @@ const TrackRecordSection: React.FC<TrackRecordSectionProps> = ({ className = "" 
     ]
 
     return (
-        <section className={`relative w-full bg-black  h-auto flex justify-center items-center py-20 md:py-0 ${className}`}>
+        <section className={`relative overflow-hidden w-full bg-black  h-auto flex justify-center items-center py-20 md:py-0 ${className}`}>
 
 
       {/* Background Effects */}

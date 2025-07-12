@@ -36,7 +36,7 @@ const servicesData = [
 
 const ServicesSection: React.FC<ServicesSectionProps> = ({ className = "" }) => {
     return (
-        <section className={`relative w-full bg-black pb-0  md:bg-no-repeat md:bg-cover h-auto flex justify-center items-center py-32 md:py-0 ${className}`}>
+        <section className={`relative overflow-hidden w-full bg-black pb-0  md:bg-no-repeat md:bg-cover h-auto flex justify-center items-center py-32 md:py-0 ${className}`}>
 
       {/* Background Effects */}
       <div className="absolute inset-0">

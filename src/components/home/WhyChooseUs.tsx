@@ -28,7 +28,7 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({ className = "" 
     ]
 
     return (
-        <section className={`relative w-full bg-black py-16 sm:py-20 md:py-24 lg:py-32 ${className}`}>
+        <section className={`relative overflow-hidden w-full bg-black py-16 sm:py-20 md:py-24 lg:py-32 ${className}`}>
 
 
       {/* Background Effects */}

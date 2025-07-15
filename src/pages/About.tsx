@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroSection from '../components/home/Hero'
+import HeroSection from '../components/SimpleHero'
 import { LinkButton } from '../stories/components/Button'
 
 function About() {

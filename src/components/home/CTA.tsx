@@ -17,21 +17,18 @@ const CTASection: React.FC<CTASectionProps> = ({ className = "" }) => {
                     
                     {/* Description */}
                     <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-                        <p className="body-text-sm text-white mb-2">
+                        <p className="body-text text-white mb-2">
                             Let us help you bring certainty to your next project.
                         </p>
-                        <p className="body-text-sm text-white">
+                        <p className="body-text text-white">
                             We'll take care of the numbers and drawings — you focus on building.
                         </p>
                     </div>
                     
                     {/* Action Buttons */}
                     <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 justify-center items-center w-full max-w-md lg:max-w-none mx-auto">
-                        <LinkButton  variant="tertiary" showArrow className="w-full lg:w-auto">
+                        <LinkButton  path="/contact" variant="tertiary" showArrow className="w-full lg:w-auto">
                             Request a Quote
-                        </LinkButton>
-                        <LinkButton  variant="tertiary" showArrow className="w-full lg:w-auto">
-                            Schedule Consultation
                         </LinkButton>
                     </div>
                 </div>

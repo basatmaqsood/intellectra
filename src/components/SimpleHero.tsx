@@ -1,6 +1,6 @@
 import type React from "react"
 import { Icons } from "../assets/icons/icons"
-import Headline from "./home/Headline"
+import Headline from "./home/AnimatedHeadline"
 
 interface TaglineLine {
   text: string

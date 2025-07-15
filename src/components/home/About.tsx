@@ -34,7 +34,7 @@ const AboutUsSection: React.FC<AboutUsSectionProps> = ({ className = "" }) => {
                 <div className="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-8 mb-4 md:mb-10">
                     {/* First Card - We Turn Complexity into Clarity */}
                     <div className=" border border-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 md:col-span-3">
-                        <h3 className="heading-6 text-primary-300 text-center md:text-start mb-6">
+                        <h3 className="heading-6 text-primary-300 text-center mb-6">
                             Turning Complexity into Clarity
                         </h3>
                         <p className="text-white body-text-sm  leading-relaxed text-center">
@@ -43,7 +43,7 @@ const AboutUsSection: React.FC<AboutUsSectionProps> = ({ className = "" }) => {
 
                     {/* Second Card - Smart Project Support */}
                     <div className=" border border-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 md:col-span-2">
-                        <h6 className="heading-6 text-center md:text-start text-primary-300 mb-6 leading-tight heading-6">
+                        <h6 className="heading-6 text-center  text-primary-300 mb-6 leading-tight heading-6">
                             Smart Project Support
                         </h6>
                         <p className="text-white body-text-sm  text-center">Whether it s a large-scale MEP setup or smart IT system planning, our experts deliver clear, reliable, and tailored estimates and drawings</p>

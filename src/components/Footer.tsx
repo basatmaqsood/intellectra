@@ -61,19 +61,19 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
                         <div className="space-y-3 sm:space-y-4">
                             <div className="flex items-center gap-3">
                                 <img src={Icons.linkedin} alt="LinkedIn" className="w-5 h-5" />
-                                <a href="#" className="body-text-sm text-white hover:text-white/80 transition-colors">
+                                <a href="https://www.linkedin.com/" target="_blank" className="body-text-sm text-white hover:text-white/80 transition-colors">
                                     LinkedIn
                                 </a>
                             </div>
                             <div className="flex items-center gap-3">
                                 <img src={Icons.facebook} alt="Facebook" className="w-5 h-5" />
-                                <a href="#" className="body-text-sm text-white hover:text-white/80 transition-colors">
+                                <a href="https://www.facebook.com/" target="_blank" className="body-text-sm text-white hover:text-white/80 transition-colors">
                                     Facebook
                                 </a>
                             </div>
                             <div className="flex items-center gap-3">
                                 <img src={Icons.instagram} alt="Instagram" className="w-5 h-5" />
-                                <a href="#" className="body-text-sm text-white hover:text-white/80 transition-colors">
+                                <a href="https://www.instagram.com/" target="_blank" className="body-text-sm text-white hover:text-white/80 transition-colors">
                                     Instagram
                                 </a>
                             </div>

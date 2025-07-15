@@ -22,11 +22,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     const descriptionSizeClass = isMobile ? "" : ""
 
     return (
-        <div className={`flex flex-col gap-2 justify-between !border-2 !border-white ${paddingClass} bg-black rounded-md shadow-lg hover:shadow-xl transition-shadow duration-300 text-center ${className}`}>
-            <div className={`flex justify-center`}>
-                <img src={icon} alt={title} />
+        <div className={`flex flex-col !border-2 !border-white ${paddingClass} bg-black rounded-md shadow-lg hover:shadow-xl transition-shadow duration-300 text-center ${className}`}>
+            <div className={`flex justify-center lg:min-h-[60px]`}>
+                <img src={icon} alt={title} className="w-auto h-auto min-h-[60px]" />
             </div>
-            <h3 className={`heading-6 text-primary-300  ${titleSizeClass}`}>
+            <h3 className={`heading-6 mt-2 mb-2 lg:mb-0 text-primary-300 lg:max-w-[75%] mx-auto text-center lg:min-h-[6rem] ${titleSizeClass}`}>
                 {title}
             </h3>
             <p className={`text-white body-text-sm leading-relaxed text-center ${descriptionSizeClass}`}>

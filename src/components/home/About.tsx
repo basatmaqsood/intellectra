@@ -18,7 +18,7 @@ const AboutUsSection: React.FC<AboutUsSectionProps> = ({ className = "" }) => {
                 </div>
 
                 {/* Teal gradient ball - top right */}
-        <div className="absolute top-0 right-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full translate-x-5/8 md:translate-x-3/8 translate-y-4 md:translate-y-10 blur-lg"
+                <div className="absolute top-0 right-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full translate-x-5/8 md:translate-x-3/8 translate-y-4 md:translate-y-10 blur-lg"
                     style={{
                         background: 'radial-gradient(circle at center, #7EC8C4 0%, #7EC8e4 10%, #000000 100%)'
                     }}>
@@ -54,9 +54,11 @@ const AboutUsSection: React.FC<AboutUsSectionProps> = ({ className = "" }) => {
                 {/* Bottom Full-Width Card */}
                 <div className="border border-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                        <div className="flex">
                         <p className="text-white body-text-sm leading-relaxed text-center">
-                            Discover how we simplify complex projects with precision and expertise.
-                        </p>
+                            Want to learn how we simplify complex projects?
+                            </p>
+                        </div>
                         <div className="flex justify-center md:justify-end md:flex-shrink-0">
                             <LinkButton variant="tertiary" showArrow path="/about">Explore More</LinkButton>
                         </div>

@@ -84,7 +84,7 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
                 {/* Copyright */}
                 <div className=" pt-6 sm:pt-8 text-center">
                     <p className="body-text-sm text-white">
-                        Copyright © 2025 LantroTech. All Rights Reserved
+                        Copyright © 2025 Intellectra. All Rights Reserved
                     </p>
                 </div>
             </div>

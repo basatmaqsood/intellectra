@@ -1,8 +1,13 @@
 import type React from "react"
 import { Icons } from "../assets/icons/icons"
-import Headline from "./home/AnimatedHeadline"
+import Headline from "./Headline"
 
 interface TaglineLine {
+  text: string
+  highlightedWords?: Array<{ word: string; color: string }>
+}
+
+interface HeadlineLine {
   text: string
   highlightedWords?: Array<{ word: string; color: string }>
 }
@@ -14,12 +19,7 @@ interface HeroSectionProps {
 
   // Content props - now supporting multi-line with highlighted words
   headline: {
-    lines: Array<{
-      text: string
-      highlightedWords: Array<{ word: string; color: string }>
-    }>
-    interval?: number
-    animationDuration?: number
+    lines: HeadlineLine[]
   }
   tagline: {
     lines: TaglineLine[]
@@ -69,7 +69,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     }
 
     return (
-      <div className="text-white  body-text-medium lg:body-text  leading-relaxed max-w-4xl opacity-90">
+      <div className="text-white body-text  leading-relaxed max-w-4xl">
         {tagline.lines.map((line, index) => (
           <p key={index}>
             <span
@@ -124,8 +124,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         {/* Headline using the standalone component */}
         <Headline
           lines={headline.lines}
-          interval={headline.interval}
-          animationDuration={headline.animationDuration}
           className="heading-2 mb-3 md:mb-2 max-w-7xl" 
         />
 

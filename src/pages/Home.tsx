@@ -1,5 +1,5 @@
 import AboutSection from '../components/home/About'
-import CTASection from '../components/home/CTA'
+import CTASection from '../components/CTA'
 import Footer from '../components/Footer'
 import HeroSection from '../components/home/Hero'
 import HowItWorks from '../components/home/HowItWorks'
@@ -56,7 +56,7 @@ function Home() {
     <WhyChooseUsSection/>
     <HowItWorks/>
     <ReviewsSection/>
-    <CTASection/>
+    <CTASection title="READY TO GET STARTED?" description_line1="Let us help you bring certainty to your next project." description_line2="We’ll take care of the numbers and drawings — you focus on building." buttonText="Get Started" buttonPath="/contact" />
     <Footer/>
     </>
   )

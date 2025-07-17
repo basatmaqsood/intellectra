@@ -111,11 +111,11 @@ const ServiceCardsContainer: React.FC = () => {
                     {services.map((service, index) => {
                         // Determine background and title color based on service type
                         let titleColorClass = "text-primary-300"; // Default orange
-                        let backgroundClass = "bg-gradient-to-b from-black from-55% to-[#F98328] to-100%"; // Default dark brown gradient with 66% black
+                        let backgroundClass = "bg-gradient-to-b from-black from-50% to-[#5f3310] to-100%"; // Default dark brown gradient with 66% black
                         
                         if (service.title === "SHOP DRAWINGS" || service.title === "MEP ESTIMATION" || service.title === "ENGINEERING DOCUMENTATION") {
                             titleColorClass = "text-accent2-300"; // Teal color
-                            backgroundClass = "bg-gradient-to-b from-black from-55% to-[#7EC8C4] to-100%"; // Teal gradient with 66% black
+                            backgroundClass = "bg-gradient-to-b from-black from-50% to-[#3b5c5b] to-100%"; // Teal gradient with 66% black
                         } 
                         
                         return (

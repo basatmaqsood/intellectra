@@ -1,0 +1,74 @@
+import React from "react";
+import ServiceCard from "./ServiceCard";
+import { Icons } from "../../assets/icons/icons";
+
+interface ServiceData {
+    icon: string;
+    title: string;
+    description: string;
+}
+
+const ServiceCardsContainer: React.FC = () => {
+    const services: ServiceData[] = [
+        {
+            icon: Icons.MEPColor,
+            title: "MEP ESTIMATION",
+            description: "We provide accurate Mechanical, Electrical, and Plumbing (MEP) estimates for a variety of sectors—residential, commercial, and industrial. Our reports support competitive bidding, design coordination, and efficient budgeting."
+        },
+        {
+            icon: Icons.ITColor,
+            title: "IT ESTIMATION",
+            description: "From structured cabling to smart security systems, our IT estimates give you a clear cost breakdown of your building's digital backbone. Ideal for contractors and developers integrating modern technologies into physical spaces."
+        },
+        {
+            icon: Icons.DrawingColor,
+            title: "SHOP DRAWINGS",
+            description: "We develop detailed, compliance-ready shop drawings for MEP, architectural, and structural systems. Each drawing is designed to support field coordination and fast-track approvals."
+        },
+        {
+            icon: Icons.ElectricalColor,
+            title: "ELECTRICAL ESTIMATION",
+            description: "We deliver standards-aligned electrical estimates including load calculations, equipment lists, and labor projections. Perfect for teams managing power systems, lighting layouts, or full electrical distribution."        },
+        {
+            icon: Icons.EngineeringColor,
+            title: "ENGINEERING DOCUMENTATION",
+            description: "From BOQs and specifications to detailed scope documentation, our engineering documents are clean, compliant, and contractor-ready. We ensure your paperwork supports the flow of procurement, approvals, and execution."
+        },
+        {
+            icon: Icons.CaseStudyColor,
+            title: "CASE STUDIES",
+            description: "See how INTELLECTRA has helped contractors and consultants win bids and deliver with confidence. Featured project: Sol on Park – Senior Living High Rise"        }
+    ];
+
+    return (
+        <section className="w-full bg-black py-54.5 sm:py-52 md:60 lg:py-70  xl:py-79">
+            <div className="w-full max-w-[67%] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
+                <div className="flex flex-col gap-6 md:gap-8 lg:gap-10">
+                    {services.map((service, index) => {
+                        // Determine background and title color based on service type
+                        let titleColorClass = "text-primary-300"; // Default orange
+                        let backgroundClass = "bg-gradient-to-b from-black from-55% to-[#F98328] to-100%"; // Default dark brown gradient with 66% black
+                        
+                        if (service.title === "SHOP DRAWINGS" || service.title === "MEP ESTIMATION" || service.title === "ENGINEERING DOCUMENTATION") {
+                            titleColorClass = "text-accent2-300"; // Teal color
+                            backgroundClass = "bg-gradient-to-b from-black from-55% to-[#7EC8C4] to-100%"; // Teal gradient with 66% black
+                        } 
+                        
+                        return (
+                            <ServiceCard
+                                key={index}
+                                icon={service.icon}
+                                title={service.title}
+                                description={service.description}
+                                titleColorClass={titleColorClass}
+                                backgroundClass={backgroundClass}
+                            />
+                        );
+                    })}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default ServiceCardsContainer;

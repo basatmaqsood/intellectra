@@ -14,6 +14,12 @@ import linkedin from '../images/icons/linkedin.png';
 import instagram from '../images/icons/instagram.png';
 import WhiteRight from '../images/icons/WhiteRight.png';
 import OrangeRight from '../images/icons/OrangeRight.png';
+import CaseStudyColor from '../images/icons/casestudy-color.png';
+import DrawingColor from '../images/icons/Drawing-color.png';
+import ElectricalColor from '../images/icons/electrical-color.png';
+import MEPColor from '../images/icons/mep-color.png';
+import ITColor from '../images/icons/it-color.png';
+import EngineeringColor from '../images/icons/Engineering-color.png';
 
 
 
@@ -36,4 +42,10 @@ export const Icons = {
   instagram: instagram,
   WhiteRight: WhiteRight,
   OrangeRight: OrangeRight,
+  CaseStudyColor: CaseStudyColor,
+  DrawingColor: DrawingColor,
+  ElectricalColor: ElectricalColor,
+  MEPColor: MEPColor,
+  ITColor: ITColor,
+  EngineeringColor: EngineeringColor, 
 };

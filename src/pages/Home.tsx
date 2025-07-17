@@ -24,7 +24,7 @@ const headlineData = {
         highlightedWords: [
           { word: "INSPIRE.", color: "text-primary-300" },
           { word: "ELEVATE.", color: "text-primary-300" },
-          { word: "GROW.", color: "text-primary-300" },
+          { word: "ALIGN.", color: "text-primary-300" },
         ],
       },
     ],

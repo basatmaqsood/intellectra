@@ -112,7 +112,6 @@ const HowItWorks = () => {
       </div>
       
       
-      {/* Background blur elements - positioned exactly as in screenshot */}
       {/* Main content - centered */}
       <div className="relative z-10 container mx-auto px-4 md:px-8 flex flex-col items-center">
         {/* Header */}

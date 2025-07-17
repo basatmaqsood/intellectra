@@ -41,7 +41,71 @@ const ServiceCardsContainer: React.FC = () => {
     ];
 
     return (
-        <section className="w-full bg-black py-54.5 sm:py-52 md:60 lg:py-70  xl:py-79">
+        <section className="relative overflow-hidden w-full  py-54.5 sm:py-52 md:60 lg:py-70  xl:py-79">
+            
+                  {/* Background Effects */}
+      <div className="absolute inset-0 z-[-1] overflow-hidden">
+        {/* Orange gradient ball - bottom left */}
+        <div className="absolute bottom-[75%] left-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full -translate-x-2/4 -translate-y-10 blur-lg"
+             style={{
+               background: 'radial-gradient(circle at center, #F98328 0%, #Fa8f28 10%, #000000 100%)'
+             }}>
+        </div>
+        
+        {/* Teal gradient ball - top right */}
+        <div className="absolute top-0 right-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full translate-x-5/8 md:translate-x-3/8 translate-y-4 md:translate-y-10 blur-lg"
+             style={{
+               background: 'radial-gradient(circle at center, #7EC8C4 0%, #7EC8e4 10%, #000000 100%)'
+             }}>
+        </div>
+
+
+        {/* Orange gradient ball - bottom left */}
+        <div className="absolute bottom-[50%] left-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full -translate-x-2/4 -translate-y-10 blur-lg"
+             style={{
+               background: 'radial-gradient(circle at center, #F98328 0%, #Fa8f28 10%, #000000 100%)'
+             }}>
+        </div>
+        
+        {/* Teal gradient ball - top right */}
+        <div className="absolute top-[25%] right-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full translate-x-5/8 md:translate-x-3/8 translate-y-4 md:translate-y-10 blur-lg"
+             style={{
+               background: 'radial-gradient(circle at center, #7EC8C4 0%, #7EC8e4 10%, #000000 100%)'
+             }}>
+        </div>
+
+
+        {/* Orange gradient ball - bottom left */}
+        <div className="absolute bottom-[25%] left-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full -translate-x-2/4 -translate-y-10 blur-lg"
+             style={{
+               background: 'radial-gradient(circle at center, #F98328 0%, #Fa8f28 10%, #000000 100%)'
+             }}>
+        </div>
+        
+        {/* Teal gradient ball - top right */}
+        <div className="absolute top-[50%] right-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full translate-x-5/8 md:translate-x-3/8 translate-y-4 md:translate-y-10 blur-lg"
+             style={{
+               background: 'radial-gradient(circle at center, #7EC8C4 0%, #7EC8e4 10%, #000000 100%)'
+             }}>
+        </div>
+
+
+        {/* Orange gradient ball - bottom left */}
+        <div className="absolute bottom-0 left-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full -translate-x-2/4 -translate-y-10 blur-lg"
+             style={{
+               background: 'radial-gradient(circle at center, #F98328 0%, #Fa8f28 10%, #000000 100%)'
+             }}>
+        </div>
+        
+        {/* Teal gradient ball - top right */}
+        <div className="absolute top-[75%] right-0 w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-84 xl:h-84 rounded-full translate-x-5/8 md:translate-x-3/8 translate-y-4 md:translate-y-10 blur-lg"
+             style={{
+               background: 'radial-gradient(circle at center, #7EC8C4 0%, #7EC8e4 10%, #000000 100%)'
+             }}>
+        </div>
+      </div>
+
+
             <div className="w-full max-w-[67%] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
                 <div className="flex flex-col gap-6 md:gap-8 lg:gap-10">
                     {services.map((service, index) => {

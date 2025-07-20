@@ -23,7 +23,7 @@ const ContactHero: React.FC = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 min-h-screen flex items-center">
+      <div className="relative z-10 min-h-screen flex items-center py-15">
         <div className="container mx-auto py-18 sm:py-0 px-12 xs:px-22 sm:px-28 lg:px-36 xl:px-56">
           {/* Header */}
           <div className="text-center mb-12 sm:mb-16 md:mb-20">

@@ -1,6 +1,8 @@
 import type React from "react"
+import { useState, useEffect } from "react"
 import { Icons } from "../../assets/icons/icons"
 import Headline from "./AnimatedHeadline"
+import Menubar from "../Menubar"
 
 interface TaglineLine {
   text: string
@@ -39,10 +41,55 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   tagline,
   buttonComponent,
 }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  
+  // Prevent body scroll and layout shift when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      // Get current scroll position
+      const scrollY = window.scrollY
+      // Prevent body scroll and maintain scroll position
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollY}px`
+      document.body.style.left = '0'
+      document.body.style.right = '0'
+      document.body.style.overflow = 'hidden'
+    } else {
+      // Restore body scroll
+      const scrollY = document.body.style.top
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.left = ''
+      document.body.style.right = ''
+      document.body.style.overflow = ''
+      // Restore scroll position
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || '0') * -1)
+      }
+    }
+
+    // Cleanup function
+    return () => {
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.left = ''
+      document.body.style.right = ''
+      document.body.style.overflow = ''
+    }
+  }, [isMenuOpen])
+  
   // Create background style based on props
   const backgroundStyle = backgroundImage
     ? { backgroundImage: `url(${backgroundImage})` }
     : { backgroundColor: backgroundColor || "#000" }
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  const closeMenu = () => {
+    setIsMenuOpen(false)
+  }
 
   const renderTagline = () => {
     const highlightWords = (text: string, highlightedWords?: Array<{ word: string; color: string }>) => {
@@ -86,7 +133,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <div className="relative min-h-screen w-full bg-cover bg-center bg-no-repeat flex flex-col" style={backgroundStyle}>
       {/* Header with logo and hamburger menu */}
-      <header className="flex justify-between items-center pt-[3.5rem] md:pt-[5rem] lg:pt-[6.5rem] px-[1.25rem] sm:px-[2rem] md:px-[2rem] lg:px-[4rem]">
+      <header className={`${isMenuOpen ? 'fixed top-0 left-0 right-0 bg-black' : 'relative'} z-50 flex justify-between items-center pt-[3.5rem] md:pt-[4rem] xl:pt-[6.5rem] px-[1.25rem] sm:px-[2rem] md:px-[2rem] lg:px-[4rem]`}>
         {/* Logo */}
         <div className="text-white text-lg md:text-xl font-bold tracking-wider">
           <img
@@ -104,7 +151,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
 
         {/* Hamburger Menu */}
-        <button className="text-white p-2" aria-label="Menu">
+        <button className="text-white p-2" aria-label="Menu" onClick={toggleMenu}>
           <img
             src={Icons.Hamburger || "/placeholder.svg"}
             alt="Menu"
@@ -118,6 +165,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           />  
         </button>
       </header>
+
+      {/* Spacer to prevent layout shift when header becomes fixed */}
+      {isMenuOpen && (
+        <div className="pt-[3.5rem] md:pt-[4rem] xl:pt-[6.5rem] h-[calc(2rem+3.5rem)] md:h-[calc(2.5rem+4rem)] xl:h-[calc(2.5rem+6.5rem)]"></div>
+      )}
 
       {/* Main content - centered */}
       <main className="flex-1 flex flex-col justify-center items-center text-center px-6 md:px-8 lg:px-12 py-[4.5rem]">
@@ -135,6 +187,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         {/* Optional Button */}
         {buttonComponent && <div className="mt-16 ">{buttonComponent}</div>}
       </main>
+
+      {/* Menubar Component */}
+      <Menubar isOpen={isMenuOpen} onClose={closeMenu} />
     </div>
   )
 }

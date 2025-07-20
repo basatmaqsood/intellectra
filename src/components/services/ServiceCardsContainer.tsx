@@ -6,6 +6,9 @@ interface ServiceData {
     icon: string;
     title: string;
     description: string;
+    featuredText?: string;
+    buttonText?: string;
+    buttonPath?: string;
 }
 
 const ServiceCardsContainer: React.FC = () => {
@@ -37,7 +40,11 @@ const ServiceCardsContainer: React.FC = () => {
         {
             icon: Icons.CaseStudyColor,
             title: "CASE STUDIES",
-            description: "See how INTELLECTRA has helped contractors and consultants win bids and deliver with confidence. Featured project: Sol on Park – Senior Living High Rise"        }
+            description: "See how INTELLECTRA has helped contractors and consultants win bids and deliver with confidence.",
+            featuredText: "Featured project: Sol on Park – Senior Living High Rise",
+            buttonText: "View Case Study",
+            buttonPath: "/case-study/sol-on-park"
+        }
     ];
 
     return (
@@ -126,6 +133,9 @@ const ServiceCardsContainer: React.FC = () => {
                                 description={service.description}
                                 titleColorClass={titleColorClass}
                                 backgroundClass={backgroundClass}
+                                featuredText={service.featuredText}
+                                buttonText={service.buttonText}
+                                buttonPath={service.buttonPath}
                             />
                         );
                     })}

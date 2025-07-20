@@ -1,4 +1,5 @@
 import type React from "react"
+import { LinkButton } from "../../stories/components/Button"
 
 interface ServiceCardProps {
     icon: string
@@ -7,6 +8,10 @@ interface ServiceCardProps {
     className?: string
     titleColorClass?: string
     backgroundClass?: string
+    featuredText?: string
+    buttonText?: string
+    buttonPath?: string
+    onButtonClick?: () => void
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -15,7 +20,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     description,
     className = "",
     titleColorClass = "text-primary-300", // Default orange color
-    backgroundClass = "bg-gradient-to-b from-black to-[#1e1005]" // Default background gradient
+    backgroundClass = "bg-gradient-to-b from-black to-[#1e1005]", // Default background gradient
+    featuredText,
+    buttonText,
+    buttonPath,
+    onButtonClick
 }) => {
     return (
         <div className={`!border-1 !border-white rounded-[40px] py-28 px-12 sm:py-28.5 sm:px-22.5 md:py-30 md:px-28 lg:py-32 lg:px-32 xl:py-34.5 xl:px-37.5 ${backgroundClass} shadow-lg hover:shadow-xl transition-shadow duration-300 ${className}`}>
@@ -37,6 +46,30 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             <p className="text-white body-text leading-relaxed text-center sm:text-left">
                 {description}
             </p>
+            
+            {/* Featured Text - Optional */}
+            {featuredText && (
+                <div className="mt-4 md:mt-6">
+                    <p className="text-white body-text leading-relaxed text-center sm:text-left">
+                        {featuredText}
+                    </p>
+                </div>
+            )}
+            
+            {/* Button - Optional */}
+            {buttonText && (buttonPath || onButtonClick) && (
+                <div className="mt-6 md:mt-8 flex justify-center">
+                    <LinkButton 
+                        variant="tertiary" 
+                        showArrow 
+                        path={buttonPath || "#"}
+                        onClick={onButtonClick}
+                        className="text-sm"
+                    >
+                        {buttonText}
+                    </LinkButton>
+                </div>
+            )}
         </div>
     )
 }

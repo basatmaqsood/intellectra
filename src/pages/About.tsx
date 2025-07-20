@@ -1,9 +1,9 @@
 import HeroSection from '../components/SimpleHero'
 import Footer from '../components/Footer'
 import CTASection from '../components/CTA'
-import WhoWeAre from '../components/about/WhoWeAre'
-import CoreValue from '../components/about/CoreValue'
-import CompanyValues from '../components/about/CompanyValues'
+import WhoWeAreSection from '../components/about/WhoWeAreSection'
+import TeamDescriptionSection from '../components/about/TeamDescriptionSection'
+import ValuesSection from '../components/about/ValuesSection'
 
 function About() {
 
@@ -28,10 +28,10 @@ function About() {
   return (
     <>
     <HeroSection headline={headlineData} tagline={taglineData} backgroundImage='/images/hero-bg.png'/>
-    <WhoWeAre />
-    <CoreValue />
-    <CompanyValues />
-    <CTASection title="LET'S BUILD WITH CERTAINITY" description_line1="We Believe greate projects start with smart foundation" description_line2="Let INTELLECTRA be the silent force behind your success — with accurate numbers, detailed drawings, and documents you can count on." buttonText="Get Started" buttonPath="/contact" />
+    <WhoWeAreSection />
+    <TeamDescriptionSection />
+    <ValuesSection />
+    <CTASection title="LET'S BUILD WITH CERTANITY" description_line1="We believe great projects start with smart foundations." description_line2="Let INTELLECTRA be the silent force behind your success — with accurate numbers, detailed drawings, and documents you can count on." buttonText="Get Started" buttonPath="/contact" />
     <Footer/>
     </>
   )

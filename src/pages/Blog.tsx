@@ -1,7 +1,7 @@
 import HeroSection from '../components/SimpleHero'
 import Footer from '../components/Footer'
-import CTASection from '../components/CTA'
 import ContentSection from '../components/ContentSection'
+import GradientBg from '../components/Blog-gradient-bg'
 
 function Blog() {
     const headlineData = {
@@ -31,8 +31,9 @@ function Blog() {
             <HeroSection headline={headlineData} tagline={taglineData} backgroundImage='/images/blog-bg.png' />
 
             {/* Blog Content */}
-            <section className="w-full bg-black py-14 sm:py-20 md:py-24 lg:py-28 xl:py-32">
-                <div className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] xl:max-w-[70%] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+            <section className="w-full relative py-14 sm:py-20 md:py-24 lg:py-28 xl:py-32">
+                <GradientBg />
+                <div className="w-full max-w-[70%] mx-auto ">
 
                     {/* Introduction */}
                     <div className="">
@@ -158,7 +159,6 @@ function Blog() {
                         <ContentSection heading="HOW INTELLECTRA DELIVERED" className='mb-0'>
                             Our team provThe Sol on Park project required a strategic blend of cost control, design clarity, and timeline sensitivity due to its high-rise structure and multi-functional use. INTELLECTRA began with a comprehensive project scope analysis, ensuring close alignment with architects, developers, and engineering consultants.ided comprehensive MEP estimation and shop drawings that enabled the contractor to submit a winning bid and complete the project successfully:
                         </ContentSection>
-
 
                         <ContentSection className='mb-0'>
                             To deliver accurate and reliable forecasting, our team applied a combination of unit estimation, point estimates, and parametric modeling — enabling us to account for real-world material costs, labor fluctuations, and varying construction scenarios. These proven methods helped us model costs with precision and anticipate potential risks early in the project cycle.

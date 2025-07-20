@@ -7,16 +7,20 @@ function Blog() {
     const headlineData = {
         lines: [
             {
-                text: "HOW WE DELIVER PRECISE ESTIMATION",
-                highlightedWords: [{ word: "PRECISE", color: "text-primary-300" }],
-            }
+                text: "HOW WE DELIVER",
+                highlightedWords: [{ word: "PRECISE ESTIMATION", color: "text-primary-300" }],
+            },
+            {
+                text: "PRECISE ESTIMATION",
+                highlightedWords: [{ word: "PRECISE ESTIMATION", color: "text-primary-300" }],
+            },
         ],
     }
 
     const taglineData = {
         lines: [
             {
-                text: "A GUIDE TO INTELLECTRA",
+                text: "A Behind the Scenes Look",
                 highlightedWords: [],
             }
         ],
@@ -24,7 +28,7 @@ function Blog() {
 
     return (
         <>
-            <HeroSection headline={headlineData} tagline={taglineData} backgroundImage='/images/hero-bg.png' />
+            <HeroSection headline={headlineData} tagline={taglineData} backgroundImage='/images/blog-bg.png' />
 
             {/* Blog Content */}
             <section className="w-full bg-black py-14 sm:py-20 md:py-24 lg:py-28 xl:py-32">
@@ -211,13 +215,6 @@ function Blog() {
                 </div>
             </section>
 
-            <CTASection
-                title="READY TO GET STARTED?"
-                description_line1="Let us help you bring certainty to your next project."
-                description_line2="We'll take care of the numbers and drawings — you focus on building."
-                buttonText="Get Started"
-                buttonPath="/contact"
-            />
             <Footer />
         </>
     )

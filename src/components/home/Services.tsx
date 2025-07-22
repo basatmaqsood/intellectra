@@ -55,7 +55,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ className = "" }) => 
         </div>
       </div>
 
-            <div className="w-full max-w-[90%] md:max-w-[80%] mx-auto px-4 md:px-8">
+            <div className="w-full max-w-[90%] sm:max-w-[70%] lg:max-w-[80%] mx-auto px-4 md:px-8">
                 {/* Section Title */}
                 <h2 className="heading-2 text-[1.8rem] md:text-[4.5rem] text-center text-primary-300 mb-20 md:mb-48 uppercase">
                     What We Do Best
@@ -71,7 +71,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ className = "" }) => 
                                 icon={service.icon}
                                 title={service.title}
                                 description={service.description}
-                                className={`w-full h-full max-w-[50%] sm:max-w-sm ${
+                                className={`w-full h-full max-w-[50%] sm:max-w-lg ${
                                     index === 4 ? 'sm:col-start-1 sm:col-end-3 sm:justify-self-center sm:max-w-xs lg:col-start-auto lg:col-end-auto lg:max-w-sm' : ''
                                 }`}
                                 isMobile={false}

@@ -25,7 +25,7 @@ const AboutUsSection: React.FC<AboutUsSectionProps> = ({ className = "" }) => {
                 </div>
             </div>
 
-            <div className="w-full max-w-[90%] sm:max-w-[60%] mx-auto px-4 md:px-8
+            <div className="w-full max-w-[60%] sm:max-w-[50%] md:max-w-[60%] mx-auto px-4 md:px-8
             ">
                 {/* Section Title */}
                 <h2 className="heading-2 text-[1.8rem] md:text-[4.5rem] text-center text-primary-300 mb-10 md:mb-28 uppercase">

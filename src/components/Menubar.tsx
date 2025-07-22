@@ -16,8 +16,8 @@ const Menubar: React.FC<MenubarProps> = ({ isOpen, onClose }) => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
-    { name: 'Career', path: '/career' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Contact', path: '/contact' },
+    { name: 'Blog', path: '/blog' }
   ]
 
   const isCurrentPage = (path: string) => {

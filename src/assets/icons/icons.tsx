@@ -19,7 +19,7 @@ import DrawingColor from '../images/icons/Drawing-color.png';
 import ElectricalColor from '../images/icons/electrical-color.png';
 import MEPColor from '../images/icons/mep-color.png';
 import ITColor from '../images/icons/it-color.png';
-import EngineeringColor from '../images/icons/Engineering-color.png';
+import EngineeringColor from '../images/icons/engineering-color.png';
 import instagramColor from '../images/icons/Instagram-color.png';
 import facebookColor from '../images/icons/Facebook-color.png';
 import linkedinColor from '../images/icons/LinkedIn-color.png';

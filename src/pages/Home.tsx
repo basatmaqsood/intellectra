@@ -49,7 +49,7 @@ const headlineData = {
 function Home() {
   return (
     <>
-    <HeroSection headline={headlineData} tagline={taglineData} backgroundImage='/images/hero-bg.png' buttonComponent = {<LinkButton path='/about' showArrow>Get Started</LinkButton>}/>
+    <HeroSection headline={headlineData} tagline={taglineData} backgroundImage='/images/hero-bg.png' buttonComponent = {<LinkButton path='/contact' showArrow>Get Started</LinkButton>}/>
     <AboutSection/>
     <ServicesSection/>
     <TrackRecordSection/>

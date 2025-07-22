@@ -116,7 +116,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     }
 
     return (
-      <div className="text-white  body-text-medium lg:body-text  leading-relaxed max-w-4xl opacity-90">
+      <div className="text-white  body-text lg:body-text  leading-relaxed max-w-4xl opacity-90">
         {tagline.lines.map((line, index) => (
           <p key={index}>
             <span
@@ -133,9 +133,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <div className="relative min-h-screen w-full bg-cover bg-center bg-no-repeat flex flex-col" style={backgroundStyle}>
       {/* Header with logo and hamburger menu */}
-      <header className={`${isMenuOpen ? 'fixed top-0 left-0 right-0 bg-black' : 'relative'} z-50 flex justify-between items-center pt-[3.5rem] md:pt-[4rem] xl:pt-[6.5rem] px-[1.25rem] sm:px-[2rem] md:px-[2rem] lg:px-[4rem]`}>
+      <header className={`${isMenuOpen ? 'fixed top-0 left-0 right-0 bg-black' : 'relative'} z-50 flex justify-between items-center pt-12 lg:pt-15  px-5 sm:px-8 md:px-10 lg:px-12 xl:px-18`}>
         {/* Logo */}
-        <div className="text-white text-lg md:text-xl font-bold tracking-wider">
+        <a href="/" className="text-white text-lg md:text-xl font-bold tracking-wider">
           <img
             src={"/images/logo.png"}
             alt="Logo"
@@ -148,7 +148,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             }}
           />
           <span className="hidden">INTELLECTRA</span>
-        </div>
+        </a>
 
         {/* Hamburger Menu */}
         <button className="text-white p-2" aria-label="Menu" onClick={toggleMenu}>

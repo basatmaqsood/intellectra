@@ -42,7 +42,7 @@ const ServiceCardsContainer: React.FC = () => {
             title: "CASE STUDIES",
             description: "See how INTELLECTRA has helped contractors and consultants win bids and deliver with confidence.",
             featuredText: "Featured project: Sol on Park – Senior Living High Rise",
-            buttonText: "View Case Study",
+            buttonText: "Read More",
             buttonPath: "/case-study/sol-on-park"
         }
     ];

@@ -63,9 +63,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                         variant="tertiary" 
                         showArrow 
                         path={buttonPath || "#"}
-                        onClick={onButtonClick}
-                        className="text-sm"
-                    >
+                        onClick={onButtonClick}                    >
                         {buttonText}
                     </LinkButton>
                 </div>

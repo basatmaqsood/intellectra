@@ -79,9 +79,9 @@ function CaseStudy() {
 
                         {/* Images Grid */}
                         <div className="grid grid-cols-2 gap-2 mb-7.5  sm:mb-15 md:mb-20 lg:mb-25 xl:mb-30">
-                            <img src="/images/casestudy/casestudy-3-1.png" alt="Construction Site" className="w-full rounded-lg" />
-                            <img src="/images/casestudy/casestudy-3-2.png" alt="Building Framework" className="w-full rounded-lg" />
-                            <img src="/images/casestudy/casestudy-3-3.png" alt="Construction Workers" className="w-full rounded-lg" />
+                            <img src="/images/casestudy/casestudy-3-1.png" alt="Construction Site" className="w-full h-full rounded-lg" />
+                            <img src="/images/casestudy/casestudy-3-2.png" alt="Building Framework" className="w-full h-full rounded-lg" />
+                            <img src="/images/casestudy/casestudy-3-3.png" alt="Construction Workers" className="w-full h-full rounded-lg" />
                             <CaseStudyChangingText />
                         </div>
 

@@ -20,7 +20,7 @@ const TrackRecordCard: React.FC<TrackRecordCardProps> = ({
     className = "" 
 }) => {
     return (
-        <div className={`border-2 border-white rounded-[40px] text-center bg-black ${className}`}>
+        <div className={`border-1 border-white rounded-[26px] text-center bg-black ${className}`}>
             <div className={`font-bold ${numberColor} ${numberSizeClass} ${marginBottomClass}`}>{number}</div>
             <div className={`text-white leading-tight ${descriptionSizeClass}`}>{description}</div>
         </div>

@@ -133,7 +133,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <div className="relative min-h-screen w-full bg-cover bg-center bg-no-repeat flex flex-col" style={backgroundStyle}>
       {/* Header with logo and hamburger menu */}
-      <header className={`${isMenuOpen ? 'fixed top-0 left-0 right-0 bg-black' : 'relative'} z-50 flex justify-between items-center pt-12 lg:pt-15  px-5 sm:px-8 md:px-10 lg:px-12 xl:px-18`}>
+      <header className={`${isMenuOpen ? 'fixed top-0 left-0 right-0 bg-black' : 'relative'} z-50 flex justify-between items-center pt-3 md:pt-4 lg:pt-7.5  px-5 sm:px-8 md:px-10 lg:px-12 xl:px-18`}>
         {/* Logo */}
         <a href="/" className="text-white text-lg md:text-xl font-bold tracking-wider">
           <img
@@ -151,11 +151,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         </a>
 
         {/* Hamburger Menu */}
-        <button className="text-white p-2" aria-label="Menu" onClick={toggleMenu}>
+        <button className="text-white" aria-label="Menu" onClick={toggleMenu}>
           <img
             src={Icons.Hamburger || "/placeholder.svg"}
             alt="Menu"
-            className="w-6 h-6 md:w-8 md:h-8"
+            className="w-6 h-6 md:w-10 md:h-10"
             onError={(e) => {
               // Fallback to CSS hamburger if image fails to load
               const target = e.target as HTMLImageElement

@@ -103,7 +103,7 @@ const StepSection = ({ step, index, isFirst, isLast }: StepSectionProps) => {
     if (step.number === 1 || step.number === 3) {
       return 'text-primary-300'; // Orange for steps 1 and 3
     } else if (step.number === 2) {
-      return 'text-teal-400'; // Teal for step 2
+      return 'text-accent2-400'; // Teal for step 2
     }
     return 'text-primary-300'; // Default color
   };
@@ -140,9 +140,9 @@ const StepSection = ({ step, index, isFirst, isLast }: StepSectionProps) => {
         {/* Text content - spans 2/3 width */}
         <div 
           ref={contentRef}
-          className="w-full md:w-2/3 mb-8 md:mb-0 pr-0 md:pr-4"
+          className="w-full md:w-2/3 mb-8 md:mb-0 pr-0 md:pr-4 max-w-[60%]  md:max-w-none"
         >
-          <h3 className={`heading-3 ${getTextColor()} mb-2 mt-[-15px]`}>
+          <h3 className={`heading-3 ${getTextColor()} sm:mt-[-5px]  md:mt-[-10px] lg:mt-[-15px] uppercase`}>
             Step {step.number}: {step.title}
           </h3>
           <p className="body-text-sm text-white max-w-md">
@@ -158,7 +158,7 @@ const StepSection = ({ step, index, isFirst, isLast }: StepSectionProps) => {
           <img 
             src={step.imagePath} 
             alt={`Step ${step.number}: ${step.title}`} 
-            className="w-28 h-28 md:w-32 md:h-32 object-contain"
+            className="w-28 h-28 md:w-full md:h-full object-contain lg:object-cover"
           />
         </div>
       </div>

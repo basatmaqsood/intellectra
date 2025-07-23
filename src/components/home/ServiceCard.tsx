@@ -22,7 +22,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     const descriptionSizeClass = isMobile ? "" : ""
 
     return (
-        <div className={`flex flex-col !border-2 !border-white ${paddingClass} bg-black rounded-md shadow-lg hover:shadow-xl transition-shadow duration-300 text-center ${className}`}>
+        <div className={`flex flex-col !border-1 !border-white ${paddingClass} bg-black rounded-[26px] shadow-lg hover:shadow-xl transition-shadow duration-300 text-center ${className}`}>
             <div className={`flex justify-center lg:min-h-[60px]`}>
                 <img src={icon} alt={title} className="w-auto h-auto min-h-[60px]" />
             </div>

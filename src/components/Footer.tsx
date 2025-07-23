@@ -128,10 +128,10 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
 
                 {/* Copyright */}
                 <div className=" pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between">
-                    <p className="body-text text-white">
+                    <p className="body-text-sm text-white">
                         Copyright © 2025 Intellectra. All Rights Reserved
                     </p>
-                    <p className="body-text text-white">
+                    <p className="body-text-sm text-white">
                         Terms of Service | Privacy Policy                    </p>
                 </div>
             </div>

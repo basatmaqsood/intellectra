@@ -36,7 +36,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
     }
 
     return (
-        <div className={` bg-transparent border border-white rounded-[35px] px-7 py-8 sm:px-9 sm:py-9 md:px-11 md:py-10 lg:px-13 lg:py-11 xl:px-14 h-full flex flex-col ${className}`}>
+        <div className={` bg-transparent border border-white rounded-[26px] px-7 py-8 sm:px-9 sm:py-9 md:px-11 md:py-10 lg:px-13 lg:py-11 xl:px-14 h-full flex flex-col ${className}`}>
             {/* Company Type and Rating */}
             <div className="flex items-start justify-between mb-4 sm:mb-5">
                 <h3 className="text-primary-300 heading-6">
@@ -60,10 +60,10 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
                     <img
                         src={reviewerAvatar}
                         alt={reviewerName}
-                        className="w-12 h-12 sm:w-14 sm:h-14 rounded-full mr-4 object-cover flex-shrink-0"
+                        className="w-12 h-12 sm:w-18 sm:h-18 rounded-full border-[2px] border-primary-300 mr-4 object-cover flex-shrink-0"
                     />
                 ) : (
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full mr-4 bg-primary-300 flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 sm:w-18 sm:h-18 rounded-full mr-4 bg-primary-300 flex items-center justify-center flex-shrink-0">
                         <span className="text-white font-semibold text-sm sm:text-base">
                             {getInitials(reviewerName)}
                         </span>
@@ -73,7 +73,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
                     <h4 className="text-primary-300 heading-6">
                         {reviewerName}
                     </h4>
-                    <p className="text-gray-300 body-text-sm mt-1">
+                    <p className="text-gray-300 body-text-sm">
                         {reviewerTitle}
                     </p>
                 </div>

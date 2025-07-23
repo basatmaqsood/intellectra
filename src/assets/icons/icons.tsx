@@ -1,5 +1,5 @@
 // Icons.tsx
-import Hamburger from '../images/icons/hamburger.svg';
+import Hamburger from '../images/icons/hamburger.png';
 import IT from '../images/icons/it.png';;
 import MEP from '../images/icons/mep.png';
 import Engineering from '../images/icons/engineering.png';

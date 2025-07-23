@@ -8,9 +8,9 @@ interface TrackRecordSectionProps {
 const TrackRecordSection: React.FC<TrackRecordSectionProps> = ({ className = "" }) => {
     const trackRecordData = [
         { number: "120+", description: "Projects Delivered", numberColor: "text-accent2-400" },
-        { number: "45+", description: "Bid Won", numberColor: "text-white" },
+        { number: "150+", description: "Winning Bids Secured", numberColor: "text-accent1-400" },
         { number: "99.7%", description: "On-Time Delivery Rate", numberColor: "text-accent1-500" },
-        { number: "15+", description: "In-House Engineers & Drafters", numberColor: "text-primary-300" }
+        { number: "35+", description: "In-House Engineers & Drafters", numberColor: "text-primary-300" }
     ]
 
     return (
@@ -75,7 +75,7 @@ const TrackRecordSection: React.FC<TrackRecordSectionProps> = ({ className = "" 
                     </div>
 
                     {/* Desktop: 2x2 grid layout (md and up) */}
-                    <div className="hidden md:grid md:grid-cols-2 md:gap-10 lg:gap-16 md:max-w-[750px] lg:max-w-[900px] md:mx-auto">
+                    <div className="hidden md:grid md:grid-cols-2 md:gap-8 md:max-w-[750px] lg:max-w-[900px] md:mx-auto">
                         {trackRecordData.map((item, index) => (
                             <TrackRecordCard
                                 key={index}

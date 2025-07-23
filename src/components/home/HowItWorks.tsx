@@ -23,8 +23,8 @@ const HowItWorks = () => {
       title: "Receive a Custom Proposal",
       description: "We'll respond with a clear plan, timeline, and quote.",
       imagePath: "/images/steps/step2.png",
-      dotColor: "bg-teal-400",
-      lineColor: "via-teal-400"
+      dotColor: "bg-accent2-400",
+      lineColor: "via-accent2-400"
     },
     {
       number: 3,
@@ -122,7 +122,7 @@ const HowItWorks = () => {
         </div>
 
         {/* Timeline container - centered with fixed width */}
-        <div className="relative w-full max-w-4xl mx-auto">
+        <div className="relative w-full ml-10 sm:ml-16 md:mx-auto  max-w-4xl mx-auto">
           {/* Main timeline structure */}
           <div className="relative max-w-md lg:max-w-none mx-auto">
             {/* Single continuous timeline line with gradient and fading effect */}

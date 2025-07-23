@@ -46,8 +46,8 @@ export const LinkButton: React.FC<LinkButtonProps> = ({
   const navigate = useNavigate();
 
   const baseClasses = clsx(
-    'inline-flex px-6 md:px-6 lg:px-10 py-2 md:py-2  flex items-center font-body transition-all duration-300',
-    'btn-default justify-center rounded-[50px] px-4 md:px-6 py-2'
+    'inline-flex px-3 xs:px-6 md:px-6 lg:px-10 py-2 md:py-2  flex items-center font-body transition-all duration-300',
+    'btn-default justify-center rounded-[50px] px-2 xs:px-4 md:px-6 py-2'
   );
 
   const variantClasses: Record<string, string> = {
@@ -76,7 +76,7 @@ export const LinkButton: React.FC<LinkButtonProps> = ({
       onClick={handleClick}
       className={clsx(baseClasses, variantClasses[variant], className)}
     >
-      <span className={`${showArrow ? 'flex items-center gap-4 ' : ''}`}>
+      <span className={`${showArrow ? 'flex items-center gap-2 xs:gap-4 ' : ''}`}>
         <span>{children}</span>
         {showArrow && <RightArrow className='' size={16} />}
       </span>

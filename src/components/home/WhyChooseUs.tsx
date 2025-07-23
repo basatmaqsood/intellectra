@@ -57,7 +57,7 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({ className = "" 
                 {/* Cards Grid */}
                 <div className="mb-16 sm:mb-20 md:mb-24 lg:mb-28">
                     {/* Mobile: Single column layout */}
-                    <div className="grid grid-cols-2 sm:hidden gap-12 max-w-[280px] mx-auto">
+                    <div className="grid grid-cols-2 sm:hidden gap-8 max-w-[280px] mx-auto">
                         {whyChooseUsData.map((item, index) => (
                             <WhyChooseUsCard
                                 key={index}

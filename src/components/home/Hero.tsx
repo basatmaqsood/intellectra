@@ -42,6 +42,19 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   buttonComponent,
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  
+  // Handle scroll detection for header styling
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY
+      // Consider header scrolled when user scrolls more than 100px
+      setIsScrolled(scrollY > 100)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   
   // Prevent body scroll and layout shift when menu is open
   useEffect(() => {
@@ -131,9 +144,22 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   }
 
   return (
-    <div className="relative min-h-screen w-full bg-cover bg-center bg-no-repeat flex flex-col" style={backgroundStyle}>
-      {/* Header with logo and hamburger menu */}
-      <header className={`${isMenuOpen ? 'fixed top-0 left-0 right-0 bg-black' : 'relative'} z-50 flex justify-between items-center pt-3 md:pt-4 lg:pt-7.5  px-5 sm:px-8 md:px-10 lg:px-12 xl:px-18`}>
+    <div className="relative min-h-screen w-full bg-cover bg-center bg-no-repeat" style={backgroundStyle}>
+      {/* Header with logo and hamburger menu - Dynamic positioning with glassmorphism */}
+      <header className={`
+        ${isScrolled || isMenuOpen ? 'fixed' : 'absolute'} 
+        top-0 left-0 right-0 z-50 
+        flex justify-between items-center 
+        pt-3 sm:pt-5 lg:pt-7.5 px-5 sm:px-8 md:px-10 lg:px-12 xl:px-18
+        ${isScrolled && !isMenuOpen ? 'pb-3 sm:pb-4 lg:pb-5' : ''}
+        transition-all duration-300 ease-in-out
+        ${isScrolled && !isMenuOpen 
+          ? 'backdrop-blur-md bg-black/20 border-b border-white/10 shadow-lg' 
+          : isMenuOpen 
+            ? 'bg-black' 
+            : ''
+        }
+      `}>
         {/* Logo */}
         <a href="/" className="text-white text-lg md:text-xl font-bold tracking-wider">
           <img
@@ -166,13 +192,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         </button>
       </header>
 
-      {/* Spacer to prevent layout shift when header becomes fixed */}
-      {isMenuOpen && (
-        <div className="pt-[3.5rem] md:pt-[4rem] xl:pt-[6.5rem] h-[calc(2rem+3.5rem)] md:h-[calc(2.5rem+4rem)] xl:h-[calc(2.5rem+6.5rem)]"></div>
-      )}
-
-      {/* Main content - centered */}
-      <main className="flex-1 flex flex-col justify-center items-center text-center px-6 md:px-8 lg:px-12 py-[4.5rem]">
+      {/* Main content - centered on entire screen */}
+      <main className="min-h-screen flex flex-col justify-center items-center text-center px-6 md:px-8 lg:px-12">
         {/* Headline using the standalone component */}
         <Headline
           lines={headline.lines}
@@ -185,7 +206,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         {renderTagline()}
 
         {/* Optional Button */}
-        {buttonComponent && <div className="mt-16 ">{buttonComponent}</div>}
+        {buttonComponent && <div className="mt-15 sm:mt-18 md:mt-15 ">{buttonComponent}</div>}
       </main>
 
       {/* Menubar Component */}

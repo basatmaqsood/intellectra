@@ -8,17 +8,17 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ className = "" }) => {
     return (
         <footer className={`w-full bg-[#C47B42] py-8 lg:py-10 ${className}`}>
-            <div className="w-full sm:max-w-[85%]  lg:max-w-[75%] mx-auto px-15">
+            <div className="w-full sm:max-w-[85%]  lg:max-w-[75%] mx-auto px-15 md:px-15">
                 {/* Main Footer Content */}
-                <div className="grid grid-cols-1 sm:grid-cols-4 gap-8  md:gap-10 xl:gap-16 mb-12 sm:mb-16 md:mb-20">
+                <div className="grid grid-cols-1 sm:grid-cols-9 gap-3  md:gap-10 xl:gap-16 mb-6">
 
                     {/* Company Info */}
-                    <div className="col-span-1 flex flex-col gap-3 sm:gap-4 lg:gap-6">
+                    <div className="col-span-1 sm:col-span-3 flex flex-col gap-3 sm:gap-4 lg:gap-6 mb-8">
                         <a href="/">
                             <img
                                 src="/images/logo.png"
                                 alt="INTELLECTRA"
-                                className="h-8 sm:h-10 md:h-12  object-contain"
+                                className=""
                             />
                         </a>
                         <div className="">
@@ -30,10 +30,10 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
                             </p>
                         </div>
                                             {/* Connect with us */}
-                    <div className="col-span-1">
+                    <div className="col-span-1 sm:col-span-3">
 
-                        <div className="flex items-center gap-3 sm:gap-5">
-                            <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-2">
+                            <div className="">
                                 <a href="https://www.linkedin.com/" target="_blank" className="body-text-sm text-white hover:text-white/80 transition-colors">
                                 <img src={Icons.linkedin} alt="LinkedIn" className="h-6 w-6 lg:h-10 lg:w-10" />
                                 </a>
@@ -53,11 +53,11 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
                     </div>
 
                     {/* Navigation */}
-                    <div className="col-span-1">
-                        <h4 className="heading-5 text-white mb-4 sm:mb-6 font-bold">
+                    <div className="col-span-1 sm:col-span-2 sm:ml-3 md:ml-0">
+                        <h4 className="heading-5  text-white mb-4 sm:mb-6 font-bold">
                             Navigation
                         </h4>
-                        <nav className="space-y-3 sm:space-y-4">
+                        <nav className="space-y-2">
                             <div>
                                 <a href="/" className="body-text-sm text-white hover:text-white/80 transition-colors">
                                     Home
@@ -83,11 +83,12 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
 
 
                     {/* Solutions */}
-                    <div className="col-span-1">
+                    <div className="col-span-1 sm:col-span-2 sm:ml-3 md:ml-0">
                         <h4 className="heading-5 text-white mb-4 sm:mb-6 font-bold">
                             Solutions
                         </h4>
-                        <nav className="space-y-3 sm:space-y-4">
+                        <nav className="space-y-2
+                        ">
                             <div>
                                 <a href="#" className="body-text-sm text-white hover:text-white/80 transition-colors">
                                     MEP Estimation
@@ -112,7 +113,7 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
                     </div>
 
                     {/* Contact */}
-                    <div className="col-span-1">
+                    <div className="col-span-1 sm:col-span-2">
                         <h4 className="heading-5 text-white mb-4 sm:mb-6 font-bold">
                             Contact
                         </h4>
@@ -127,11 +128,11 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
                 </div>
 
                 {/* Copyright */}
-                <div className=" pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between">
+                <div className=" pt-6 sm:pt-8 flex flex-col md:flex-row justify-between gap-2">
                     <p className="body-text-sm text-white">
                         Copyright © 2025 Intellectra. All Rights Reserved
                     </p>
-                    <p className="body-text-sm text-white">
+                    <p className="body-text-sm text-white md:pr-20">
                         Terms of Service | Privacy Policy                    </p>
                 </div>
             </div>

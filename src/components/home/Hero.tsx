@@ -178,17 +178,28 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
         {/* Hamburger Menu */}
         <button className="text-white" aria-label="Menu" onClick={toggleMenu}>
-          <img
-            src={Icons.Hamburger || "/placeholder.svg"}
-            alt="Menu"
-            className="w-6 h-6 md:w-10 md:h-10"
-            onError={(e) => {
-              // Fallback to CSS hamburger if image fails to load
-              const target = e.target as HTMLImageElement
-              target.style.display = "none"
-              target.nextElementSibling?.classList.remove("hidden")
-            }}
-          />  
+          <div className="relative w-6 h-6 md:w-10 md:h-10">
+            <img
+              src={Icons.Hamburger || "/placeholder.svg"}
+              alt="Menu"
+              className={`absolute inset-0 w-full h-full transition-all duration-300 ease-in-out ${
+                isMenuOpen ? 'opacity-0 rotate-90 scale-75' : 'opacity-100 rotate-0 scale-100'
+              }`}
+              onError={(e) => {
+                // Fallback to CSS hamburger if image fails to load
+                const target = e.target as HTMLImageElement
+                target.style.display = "none"
+                target.nextElementSibling?.classList.remove("hidden")
+              }}
+            />
+            <img
+              src={Icons.Close || "/placeholder.svg"}
+              alt="Close"
+              className={`absolute inset-0 w-full h-full transition-all duration-300 ease-in-out ${
+                isMenuOpen ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 rotate-90 scale-75'
+              }`}
+            />
+          </div>
         </button>
       </header>
 

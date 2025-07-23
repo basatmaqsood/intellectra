@@ -23,6 +23,7 @@ import EngineeringColor from '../images/icons/engineering-color.png';
 import instagramColor from '../images/icons/Instagram-color.png';
 import facebookColor from '../images/icons/Facebook-color.png';
 import linkedinColor from '../images/icons/LinkedIn-color.png';
+import Close from '../images/icons/Close.png';
 
 
 
@@ -53,5 +54,6 @@ export const Icons = {
   ElectricalColor: ElectricalColor,
   MEPColor: MEPColor,
   ITColor: ITColor,
-  EngineeringColor: EngineeringColor, 
+  EngineeringColor: EngineeringColor,
+  Close: Close,
 };

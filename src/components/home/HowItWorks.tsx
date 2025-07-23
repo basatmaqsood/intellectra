@@ -15,8 +15,8 @@ const HowItWorks = () => {
       title: "Share Your Scope",
       description: "Send us your project drawings or technical needs.",
       imagePath: "/images/steps/step1.png",
-      dotColor: "bg-orange-500",
-      lineColor: "from-orange-500"
+      dotColor: "bg-primary-300",
+      lineColor: "from-primary-300"
     },
     {
       number: 2,
@@ -31,8 +31,8 @@ const HowItWorks = () => {
       title: "Get Delivery with Confidence",
       description: "Accurate estimates. Quality drawings. On time. Every time.",
       imagePath: "/images/steps/step3.png",
-      dotColor: "bg-orange-500",
-      lineColor: "to-orange-500"
+      dotColor: "bg-primary-300",
+      lineColor: "to-primary-300"
     }
   ];
 
@@ -116,7 +116,7 @@ const HowItWorks = () => {
       <div className="relative z-10 container mx-auto px-4 md:px-8 flex flex-col items-center">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="heading-2 text-orange-500 uppercase tracking-wider">
+          <h2 className="heading-2 text-primary-300 uppercase tracking-wider">
             HOW IT WORKS
           </h2>
         </div>

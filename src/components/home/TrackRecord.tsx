@@ -10,7 +10,7 @@ const TrackRecordSection: React.FC<TrackRecordSectionProps> = ({ className = "" 
         { number: "120+", description: "Projects Delivered", numberColor: "text-accent2-400" },
         { number: "45+", description: "Bid Won", numberColor: "text-white" },
         { number: "99.7%", description: "On-Time Delivery Rate", numberColor: "text-accent1-500" },
-        { number: "15+", description: "In-House Engineers & Drafters", numberColor: "text-primary-400" }
+        { number: "15+", description: "In-House Engineers & Drafters", numberColor: "text-primary-300" }
     ]
 
     return (
@@ -36,7 +36,7 @@ const TrackRecordSection: React.FC<TrackRecordSectionProps> = ({ className = "" 
 
             <div className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-[75%] lg:max-w-[70%] mx-auto px-4 sm:px-6 md:px-8">
                 {/* Section Title */}
-                <h2 className="heading-2  md:text-[3.5rem] lg:text-[4.5rem] text-center text-orange-500 mb-12 sm:mb-16 md:mb-20 lg:mb-28 uppercase font-bold">
+                <h2 className="heading-2 text-primary-300 md:text-[3.5rem] lg:text-[4.5rem] text-center mb-12 sm:mb-16 md:mb-20 lg:mb-28 uppercase font-bold">
                     Our Track Record
                 </h2>
 

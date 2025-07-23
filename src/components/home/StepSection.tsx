@@ -101,11 +101,11 @@ const StepSection = ({ step, index, isFirst, isLast }: StepSectionProps) => {
   // Get text color based on step number
   const getTextColor = () => {
     if (step.number === 1 || step.number === 3) {
-      return 'text-orange-500'; // Orange for steps 1 and 3
+      return 'text-primary-300'; // Orange for steps 1 and 3
     } else if (step.number === 2) {
       return 'text-teal-400'; // Teal for step 2
     }
-    return 'text-orange-500';
+    return 'text-primary-300'; // Default color
   };
 
   return (
@@ -142,7 +142,7 @@ const StepSection = ({ step, index, isFirst, isLast }: StepSectionProps) => {
           ref={contentRef}
           className="w-full md:w-2/3 mb-8 md:mb-0 pr-0 md:pr-4"
         >
-          <h3 className={`heading-3 ${getTextColor()} mb-2 mt-[-5px]`}>
+          <h3 className={`heading-3 ${getTextColor()} mb-2 mt-[-15px]`}>
             Step {step.number}: {step.title}
           </h3>
           <p className="body-text-sm text-white max-w-md">

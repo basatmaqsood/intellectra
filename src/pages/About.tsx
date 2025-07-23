@@ -27,7 +27,7 @@ function About() {
 
   return (
     <>
-    <HeroSection headline={headlineData} tagline={taglineData} backgroundImage='/images/hero-bg.png'/>
+    <HeroSection headline={headlineData} tagline={taglineData} backgroundImage='/images/about-bg.png'/>
     <WhoWeAreSection />
     <TeamDescriptionSection />
     <ValuesSection />

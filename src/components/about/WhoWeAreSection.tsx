@@ -32,8 +32,8 @@ const WhoWeAreSection: React.FC = () => {
           
           {/* Right Side - Content */}
           <div className="flex flex-col items-center lg:items-start lg:w-2/3 xl:w-3/5">
-            <div className="text-center lg:text-left">
-              <p className="text-white heading-6 leading-relaxed">
+            <div className="text-center lg:text-left max-w-[80%] md:max-w-[70%]">
+              <p className="text-white body-text leading-relaxed">
             Every great structure starts with a solid foundation — and so did we. INTELLECTRA began as a small team of engineers fixing real-world issues—unclear estimates, delayed drawings, and costly setbacks. What started as a side project became a trusted partner for contractors and consultants worldwide. Today, we deliver precise estimation and design solutions that bring clarity to every stage of construction.
             </p>
             </div>

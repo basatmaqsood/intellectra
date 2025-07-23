@@ -36,7 +36,7 @@ const Menubar: React.FC<MenubarProps> = ({ isOpen, onClose }) => {
       <div className="my-auto flex-1 flex flex-col justify-start pl-5 sm:pl-8 lg:pl-18">
 
         {/* Navigation Items */}
-        <nav className="my-auto text-left md:flex md:flex-col md:justify-start ">
+        <nav className="my-auto md:pt3-0 text-left md:flex md:flex-col md:justify-start ">
           {menuItems.map((item) => (
             <div key={item.name} className="mb-7 sm:mb-10 md:mb-4 lg:mb-7 ">
               <a
@@ -45,7 +45,7 @@ const Menubar: React.FC<MenubarProps> = ({ isOpen, onClose }) => {
                   e.preventDefault()
                   handleMenuItemClick(item.path)
                 }}
-                className={`heading-2 lg:heading-3 block w-full text-left ${isCurrentPage(item.path) ? 'text-primary-300' : 'text-white'
+                className={`heading-3 lg:heading-3 block w-full text-left ${isCurrentPage(item.path) ? 'text-primary-300' : 'text-white'
                   } hover:text-primary-300 transition-colors`}
               >
                 {item.name}

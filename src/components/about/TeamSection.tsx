@@ -35,9 +35,9 @@ const TeamSection: React.FC = () => {
       
       {/* Content - Right Side - Fixed Width */}
       <div className="flex flex-col items-center justify-center lg:flex-1 lg:max-w-md xl:max-w-lg 2xl:max-w-xl">
-        <div className="flex flex-col space-y-6 md:space-y-8 lg:space-y-10 xl:space-y-12 w-full max-w-sm md:max-w-md">
+        <div className="flex flex-row md:flex-col gap-3 space-y-6 md:space-y-8 lg:space-y-10 xl:space-y-12 w-full max-w-sm md:max-w-md">
           {teamMembers.map((member, memberIndex) => (
-            <div key={memberIndex} className="flex items-center gap-4 lg:gap-6 justify-start">
+            <div key={memberIndex} className="flex flex-col md:flex-row items-center gap-4 lg:gap-6 justify-start">
               {/* Profile Image */}
               <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-20 lg:h-20 xl:w-24 xl:h-24 rounded-full overflow-hidden flex-shrink-0 bg-gray-600 border border-gray-500">
                 <img 
@@ -53,8 +53,8 @@ const TeamSection: React.FC = () => {
               </div>
               
               {/* Member Info */}
-              <div className="flex flex-col min-w-0 text-left">
-                <h4 className="heading-6 text-white font-bold mb-1 leading-tight">
+              <div className="flex flex-col text-center  min-w-0 md:text-left ">
+                <h4 className="heading-6 text-white font-bold mb-1 leading-tight min-h-10 md:min-h-min">
                   {member.name}
                 </h4>
                 <p className="body-text-sm text-gray-300 leading-relaxed">

@@ -1,10 +1,128 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ContactForm from './ContactForm';
 import ContactInfoCard from './ContactInfoCard';
+import { Icons } from '../../assets/icons/icons';
+import Menubar from '../Menubar';
 
 const ContactHero: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  
+  // Handle scroll detection for header styling
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY
+      // Consider header scrolled when user scrolls more than 100px
+      setIsScrolled(scrollY > 100)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+  
+  // Prevent body scroll and layout shift when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      // Get current scroll position
+      const scrollY = window.scrollY
+      // Prevent body scroll and maintain scroll position
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollY}px`
+      document.body.style.left = '0'
+      document.body.style.right = '0'
+      document.body.style.overflow = 'hidden'
+    } else {
+      // Restore body scroll
+      const scrollY = document.body.style.top
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.left = ''
+      document.body.style.right = ''
+      document.body.style.overflow = ''
+      // Restore scroll position
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || '0') * -1)
+      }
+    }
+
+    // Cleanup function
+    return () => {
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.left = ''
+      document.body.style.right = ''
+      document.body.style.overflow = ''
+    }
+  }, [isMenuOpen])
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  const closeMenu = () => {
+    setIsMenuOpen(false)
+  }
+
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">
+      {/* Header with logo and hamburger menu - Dynamic positioning with glassmorphism */}
+      <header className={`
+        ${isScrolled || isMenuOpen ? 'fixed' : 'absolute'} 
+        top-0 left-0 right-0 z-50 
+        flex justify-between items-center 
+        pt-3 sm:pt-5 lg:pt-7.5 px-5 sm:px-8 md:px-10 lg:px-12 xl:px-18
+        ${isScrolled && !isMenuOpen ? 'pb-3 sm:pb-4 lg:pb-5' : ''}
+        transition-all duration-300 ease-in-out
+        ${isScrolled && !isMenuOpen 
+          ? 'backdrop-blur-md bg-black/20 border-b border-white/10 shadow-lg' 
+          : isMenuOpen 
+            ? 'bg-black' 
+            : ''
+        }
+      `}>
+        {/* Logo */}
+        <a href="/" className="text-white text-lg md:text-xl font-bold tracking-wider">
+          <img
+            src={"/images/logo.png"}
+            alt="Logo"
+            className="h-8 md:h-10"
+            onError={(e) => {
+              // Fallback to text if image fails to load
+              const target = e.target as HTMLImageElement
+              target.style.display = "none"
+              target.nextElementSibling?.classList.remove("hidden")
+            }}
+          />
+          <span className="hidden">INTELLECTRA</span>
+        </a>
+
+        {/* Hamburger Menu */}
+        <button className="text-white" aria-label="Menu" onClick={toggleMenu}>
+          <div className="relative w-6 h-6 md:w-10 md:h-10">
+            <img
+              src={Icons.Hamburger || "/placeholder.svg"}
+              alt="Menu"
+              className={`absolute inset-0 w-full h-full transition-all duration-300 ease-in-out ${
+                isMenuOpen ? 'opacity-0 rotate-90 scale-75' : 'opacity-100 rotate-0 scale-100'
+              }`}
+              onError={(e) => {
+                // Fallback to CSS hamburger if image fails to load
+                const target = e.target as HTMLImageElement
+                target.style.display = "none"
+                target.nextElementSibling?.classList.remove("hidden")
+              }}
+            />
+            <img
+              src={Icons.Close || "/placeholder.svg"}
+              alt="Close"
+              className={`absolute inset-0 w-full h-full transition-all duration-300 ease-in-out ${
+                isMenuOpen ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 rotate-90 scale-75'
+              }`}
+            />
+          </div>
+        </button>
+      </header>
+
       {/* Background Effects */}
       <div className="absolute inset-0">
         {/* Orange gradient ball - bottom left */}
@@ -42,6 +160,9 @@ const ContactHero: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Menubar Component */}
+      <Menubar isOpen={isMenuOpen} onClose={closeMenu} />
     </div>
   );
 };

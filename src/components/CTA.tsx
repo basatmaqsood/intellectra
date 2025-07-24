@@ -36,7 +36,7 @@ const CTASection: React.FC<CTASectionProps> = ({ title, description_line1, descr
                     
                     {/* Action Buttons */}
                     <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 justify-center items-center w-full max-w-md lg:max-w-none mx-auto">
-                        <LinkButton  path={buttonPath} variant="tertiary" showArrow className="w-full lg:w-auto">
+                        <LinkButton  path={buttonPath} variant="tertiary" showArrow className="w-auto">
                             {buttonText}
                         </LinkButton>
                     </div>

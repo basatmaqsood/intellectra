@@ -38,7 +38,7 @@ const ContactForm: React.FC = () => {
           <input
             type="text"
             name="fullName"
-            placeholder="Full Name"
+            placeholder="Full Name*"
             value={formData.fullName}
             onChange={handleChange}
             className="w-full px-7 py-4 bg-transparent border-2 text-white border-primary-300 rounded-lg  placeholder-primary-300 focus:outline-none focus:border-primary-500 transition-colors heading-6"
@@ -51,7 +51,7 @@ const ContactForm: React.FC = () => {
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="Email*"
             value={formData.email}
             onChange={handleChange}
             className="w-full px-7 py-4 bg-transparent border-2 border-primary-300 rounded-lg text-white placeholder-primary-300 focus:outline-none focus:border-primary-500 transition-colors heading-6"
@@ -64,7 +64,7 @@ const ContactForm: React.FC = () => {
           <input
             type="tel"
             name="phone"
-            placeholder="Phone"
+            placeholder="Phone*"
             value={formData.phone}
             onChange={handleChange}
             className="w-full px-7 py-4 bg-transparent border-2 border-primary-300 rounded-lg text-white placeholder-primary-300 focus:outline-none focus:border-primary-500 transition-colors heading-6"
@@ -76,7 +76,7 @@ const ContactForm: React.FC = () => {
         <div className="flex-1 flex flex-col">
           <textarea
             name="message"
-            placeholder="Message"
+            placeholder="Message*"
             value={formData.message}
             onChange={handleChange}
             className="w-full flex-1 min-h-[120px] px-7 py-4 bg-transparent border-2 border-primary-300 rounded-lg text-white placeholder-primary-300 focus:outline-none focus:border-primary-500 transition-colors resize-none heading-6 "
@@ -86,7 +86,7 @@ const ContactForm: React.FC = () => {
 
         {/* Submit Button */}
         <div className="mt-4">
-            <LinkButton showArrow className='py-3 px-16'>Submit</LinkButton>
+            <LinkButton variant='tertiary' showArrow className='py-3 px-16'>Submit</LinkButton>
         </div>
       </form>
     </div>

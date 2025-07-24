@@ -2,7 +2,7 @@ import React from 'react';
 
 const VisionSection: React.FC = () => {
   return (
-    <div className="relative overflow-hidden flex flex-col lg:flex-row lg:items-center lg:justify-center gap-8 md:gap-12 lg:gap-16 xl:gap-20 px-8 sm:px-12 md:px-16 lg:px-20 xl:px-32 2xl:px-60 py-16 sm:py-20 md:py-24 lg:py-32 xl:py-40 2xl:py-60">
+    <div className="relative overflow-hidden flex flex-col lg:flex-row lg:items-center lg:justify-center gap-8 md:gap-12 lg:gap-16 xl:gap-20 px-8 sm:px-12 md:px-16 lg:px-20 xl:px-32 2xl:px-60 py-50 sm:py-75 md:py-60">
 
             {/* Background Effects */}
             <div className="absolute inset-0 z-[-1] overflow-hidden">
@@ -23,8 +23,8 @@ const VisionSection: React.FC = () => {
 
       {/* Circle - Left Side - Fixed Width */}
       <div className="flex justify-center mb-8 lg:mb-0 lg:w-80 xl:w-96 2xl:w-[400px] lg:flex-shrink-0">
-        <div className="relative w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72 rounded-full border-2 border-primary-300 bg-black flex items-center justify-center">
-          <h3 className="heading-3 text-primary-300 uppercase font-bold text-center">
+        <div className="relative w-48 h-48 sm:w-72 sm:h-72 lg:w-84 lg:h-84 xl:w-96 xl:h-96 rounded-full border-2 border-primary-300 bg-black flex items-center justify-center">
+          <h3 className="heading-2 text-primary-300 uppercase font-bold text-center">
             VISION
           </h3>
         </div>

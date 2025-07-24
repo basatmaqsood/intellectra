@@ -8,9 +8,13 @@ function Services() {
   const headlineData = {
     lines: [
       {
-        text: "ESTIMATION AND DESIGN SERVICES",
+        text: "ESTIMATION AND DESIGN",
         highlightedWords: [{ word: "SERVICES", color: "text-primary-300" }],
-      }
+      },
+      {
+        text: "SERVICES",
+        highlightedWords: [{ word: "SERVICES", color: "text-primary-300" }],
+      },
     ],
   }
 
@@ -26,7 +30,7 @@ function Services() {
 
   return (
     <>
-    <HeroSection headline={headlineData} tagline={taglineData} backgroundImage='/images/hero-bg.png'/>
+    <HeroSection headline={headlineData} tagline={taglineData} backgroundImage='/images/services-bg.png'/>
     <ServiceCardsContainer />
     <CTASection title="WANT TO LEARN MORE" description_line1="We're proud to have supported over 120+ projects and 45+ winning bids with a 99.7% on-time delivery rate. Our estimators, drafters, and engineers are in-house—real professionals who understand what's at stake." buttonText="Get Started" buttonPath="/contact" />
     <Footer />

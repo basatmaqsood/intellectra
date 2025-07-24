@@ -69,7 +69,7 @@ const Menubar: React.FC<MenubarProps> = ({ isOpen, onClose }) => {
           <h3 className="text-white heading-4 uppercase">
             LET'S GET MOVING
           </h3>
-          <div className="border-l border-white h-8 mx-4"></div>
+          <div className="border-3 border-white h-16 mx-6"></div>
           <LinkButton variant="primary" showArrow path="/contact" onClick={() => handleMenuItemClick('/contact')}>
             Get Started
           </LinkButton>

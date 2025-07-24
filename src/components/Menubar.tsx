@@ -55,7 +55,7 @@ const Menubar: React.FC<MenubarProps> = ({ isOpen, onClose }) => {
                   {/* Mobile/Tablet CTA Section */}
         <div className="mt-5 text-left md:hidden">
           <h3 className="text-white heading-4 mb-5 uppercase">
-            LET'S GET MOVING
+            Let's Get Moving
           </h3>
           <LinkButton variant="primary" showArrow path="/contact" onClick={() => handleMenuItemClick('/contact')}>
             Get Started
@@ -66,8 +66,8 @@ const Menubar: React.FC<MenubarProps> = ({ isOpen, onClose }) => {
       <div className="hidden md:flex justify-start items-center mt-0 lg:mt-15 xl:mt-20">
         {/* CTA Section - Left */}
         <div className="flex items-center space-x-4">
-          <h3 className="text-white heading-4 uppercase">
-            LET'S GET MOVING
+          <h3 className="text-white heading-4">
+            Let's Get Moving
           </h3>
           <div className="border-3 border-white h-16 mx-6"></div>
           <LinkButton variant="primary" showArrow path="/contact" onClick={() => handleMenuItemClick('/contact')}>

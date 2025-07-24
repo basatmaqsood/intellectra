@@ -71,7 +71,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ className = "" }) => 
                                 icon={service.icon}
                                 title={service.title}
                                 description={service.description}
-                                className={`w-full h-full max-w-[50%] sm:max-w-lg ${
+                                className={`w-full h-full max-w-[60%] sm:max-w-lg ${
                                     index === 4 ? 'sm:col-start-1 sm:col-end-3 sm:justify-self-center sm:max-w-xs lg:col-start-auto lg:col-end-auto lg:max-w-sm' : ''
                                 }`}
                                 isMobile={false}

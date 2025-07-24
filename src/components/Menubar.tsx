@@ -54,7 +54,7 @@ const Menubar: React.FC<MenubarProps> = ({ isOpen, onClose }) => {
           ))}
                   {/* Mobile/Tablet CTA Section */}
         <div className="mt-5 text-left md:hidden">
-          <h3 className="text-white heading-4 mb-5 uppercase">
+          <h3 className="text-white heading-4 mb-5">
             Let's Get Moving
           </h3>
           <LinkButton variant="primary" showArrow path="/contact" onClick={() => handleMenuItemClick('/contact')}>

@@ -24,7 +24,10 @@ const Menubar: React.FC<MenubarProps> = ({ isOpen, onClose }) => {
   }
 
   const handleMenuItemClick = (path: string) => {
-    navigate(path)
+    // Only navigate if not already on the target page
+    if (location.pathname !== path) {
+      navigate(path)
+    }
     onClose()
   }
 
@@ -39,17 +42,14 @@ const Menubar: React.FC<MenubarProps> = ({ isOpen, onClose }) => {
         <nav className="my-auto md:pt3-0 text-left md:flex md:flex-col md:justify-start ">
           {menuItems.map((item) => (
             <div key={item.name} className="mb-7 sm:mb-10 md:mb-4 lg:mb-7 ">
-              <a
-                href={item.path}
-                onClick={(e) => {
-                  e.preventDefault()
-                  handleMenuItemClick(item.path)
-                }}
+              <button
+                type="button"
+                onClick={() => handleMenuItemClick(item.path)}
                 className={`heading-3 lg:heading-3 block w-full text-left ${isCurrentPage(item.path) ? 'text-primary-300' : 'text-white'
-                  } hover:text-primary-300 transition-colors`}
+                  } hover:text-primary-300 transition-colors bg-transparent border-none p-0 cursor-pointer`}
               >
                 {item.name}
-              </a>
+              </button>
             </div>
           ))}
                   {/* Mobile/Tablet CTA Section */}

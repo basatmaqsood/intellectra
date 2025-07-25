@@ -2,7 +2,7 @@ import React from 'react';
 
 const WhoWeAreSection: React.FC = () => {
   return (
-    <section className="relative w-full py-50 sm:py-75 md:py-60 overflow-hidden">
+    <section className="relative w-full py-40 sm:py-75 md:py-60 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 z-[-1] overflow-hidden">
         {/* Orange gradient ball - bottom left */}

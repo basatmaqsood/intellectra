@@ -1,5 +1,5 @@
 import type React from "react"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Icons } from "../../assets/icons/icons"
 import Headline from "./AnimatedHeadline"
 import Menubar from "../Menubar"
@@ -43,6 +43,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const savedScrollPosition = useRef(0)
+  const savedPathname = useRef('')
   
   // Handle scroll detection for header styling
   useEffect(() => {
@@ -59,25 +61,29 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   // Prevent body scroll and layout shift when menu is open
   useEffect(() => {
     if (isMenuOpen) {
-      // Get current scroll position
-      const scrollY = window.scrollY
+      // Get current scroll position and pathname
+      savedScrollPosition.current = window.scrollY
+      savedPathname.current = window.location.pathname
       // Prevent body scroll and maintain scroll position
       document.body.style.position = 'fixed'
-      document.body.style.top = `-${scrollY}px`
+      document.body.style.top = `-${savedScrollPosition.current}px`
       document.body.style.left = '0'
       document.body.style.right = '0'
       document.body.style.overflow = 'hidden'
     } else {
       // Restore body scroll
-      const scrollY = document.body.style.top
       document.body.style.position = ''
       document.body.style.top = ''
       document.body.style.left = ''
       document.body.style.right = ''
       document.body.style.overflow = ''
-      // Restore scroll position
-      if (scrollY) {
-        window.scrollTo(0, parseInt(scrollY || '0') * -1)
+      
+      // Only restore scroll position if pathname hasn't changed
+      if (window.location.pathname === savedPathname.current) {
+        // Use requestAnimationFrame to ensure DOM is ready
+        requestAnimationFrame(() => {
+          window.scrollTo(0, savedScrollPosition.current)
+        })
       }
     }
 

@@ -47,7 +47,7 @@ const TeamDescriptionSection: React.FC = () => {
     return () => clearInterval(interval);
   }, [words.length]);
   return (
-    <section className="relative w-full py-50  sm:py-75 md:py-60     overflow-hidden">
+    <section className="relative w-full py-40  sm:py-75 md:py-60     overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 z-[-1] overflow-hidden">
         {/* Orange gradient ball - bottom left */}
@@ -69,13 +69,13 @@ const TeamDescriptionSection: React.FC = () => {
         <div className="flex flex-col items-center text-center">
 
           {/* Subtitle */}
-          <p className="heading-4 text-white mb-12 xs:mb-4 md:mb-6 uppercase tracking-wider">
+          <p className="heading-4 text-white  uppercase tracking-wider">
             How Our Team Describes Us
           </p>
 
           {/* Main Title with Animated Word */}
-          <div className="mb-6 md:mb-8 lg:mb-10">
-            <h2 className="heading-2 text-white">
+          <div className="">
+            <h2 className="my-4 sm:my-6 md:my-8 lg:my-10 heading-2 text-white">
               We are
             </h2>
             <h2

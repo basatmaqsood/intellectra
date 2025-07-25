@@ -34,7 +34,7 @@ const ServiceCardsContainer: React.FC = () => {
             description: "We deliver standards-aligned electrical estimates including load calculations, equipment lists, and labor projections. Perfect for teams managing power systems, lighting layouts, or full electrical distribution."        },
         {
             icon: Icons.EngineeringColor,
-            title: "ENGINEERING DOCUMENTATION",
+            title: "ENGINEERING DOCUMENTS",
             description: "From BOQs and specifications to detailed scope documentation, our engineering documents are clean, compliant, and contractor-ready. We ensure your paperwork supports the flow of procurement, approvals, and execution."
         },
         {

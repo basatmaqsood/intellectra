@@ -18,7 +18,7 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
                             <img
                                 src="/images/logo.png"
                                 alt="INTELLECTRA"
-                                className=""
+                                className="h-full w-auto"
                             />
                         </a>
                         <div className="">
@@ -130,7 +130,7 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
                 {/* Copyright */}
                 <div className=" pt-6 sm:pt-8 flex flex-col md:flex-row justify-between gap-2">
                     <p className="body-text-sm text-white">
-                        Copyright © 2025 Intellectra. All Rights Reserved
+                        Copyright &copy; 2025 Intellectra. All Rights Reserved
                     </p>
                     <p className="body-text-sm text-white md:pr-20">
                         Terms of Service | Privacy Policy                    </p>

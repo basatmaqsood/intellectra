@@ -32,7 +32,7 @@ const VisionSection: React.FC = () => {
       
       {/* Content - Right Side - Fixed Width */}
       <div className="flex flex-col items-center justify-center lg:flex-1 lg:max-w-md xl:max-w-lg 2xl:max-w-xl">
-        <div className="max-w-lg md:max-w-xl lg:max-w-2xl text-center md:text-left">
+        <div className="max-w-lg md:max-w-xl lg:max-w-2xl text-center lg:text-left">
           <p className="text-white body-text leading-relaxed">
             To be recognized as a leading partner in project estimation and engineering design. Known for our reliability, quality, and innovation, INTELLECTRA aspires to drive digital transformation across the construction and engineering world.
           </p>

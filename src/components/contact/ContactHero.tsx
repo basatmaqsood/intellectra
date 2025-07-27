@@ -147,7 +147,7 @@ const ContactHero: React.FC = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 min-h-screen flex items-center py-15">
+      <div className="relative z-10  flex items-center py-20">
         <div className="container mx-auto py-18 sm:py-0 px-12 xs:px-22 sm:px-28 lg:px-36 xl:px-56">
           {/* Header */}
           <div className="text-center mb-12 sm:mb-16 md:mb-20">
@@ -157,7 +157,7 @@ const ContactHero: React.FC = () => {
           </div>
 
           {/* Content Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-16 mx-auto ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-12 lg:gap-16 mx-auto">
             {/* Contact Form - Left Side */}
               <ContactForm />
 

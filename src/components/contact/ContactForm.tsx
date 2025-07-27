@@ -32,7 +32,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className="w-full h-full flex flex-col order-2 sm:order-1">
-      <form onSubmit={handleSubmit} className="flex flex-col h-full space-y-4">
+      <form onSubmit={handleSubmit} className="flex flex-col body-text h-full space-y-4">
         {/* Full Name Field */}
         <div>
           <input
@@ -41,7 +41,7 @@ const ContactForm: React.FC = () => {
             placeholder="Full Name*"
             value={formData.fullName}
             onChange={handleChange}
-            className="w-full px-7 py-4 bg-transparent border-2 text-white border-primary-300 rounded-lg  placeholder-primary-300 focus:outline-none focus:border-primary-500 transition-colors heading-6"
+            className="w-full px-7 py-3 bg-transparent border-2 text-white border-primary-300 rounded-lg  placeholder-primary-300 focus:outline-none focus:border-primary-500 transition-colors heading-6"
             required
           />
         </div>
@@ -54,7 +54,7 @@ const ContactForm: React.FC = () => {
             placeholder="Email*"
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-7 py-4 bg-transparent border-2 border-primary-300 rounded-lg text-white placeholder-primary-300 focus:outline-none focus:border-primary-500 transition-colors heading-6"
+            className="w-full px-7 py-3 bg-transparent border-2 border-primary-300 rounded-lg text-white placeholder-primary-300 focus:outline-none focus:border-primary-500 transition-colors heading-6"
             required
           />
         </div>
@@ -67,7 +67,7 @@ const ContactForm: React.FC = () => {
             placeholder="Phone*"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-7 py-4 bg-transparent border-2 border-primary-300 rounded-lg text-white placeholder-primary-300 focus:outline-none focus:border-primary-500 transition-colors heading-6"
+            className="w-full px-7 py-3 bg-transparent border-2 border-primary-300 rounded-lg text-white placeholder-primary-300 focus:outline-none focus:border-primary-500 transition-colors heading-6"
             required
           />
         </div>

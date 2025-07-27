@@ -56,7 +56,7 @@ function Home() {
     <WhyChooseUsSection/>
     <HowItWorks/>
     <ReviewsSection/>
-    <CTASection title="READY TO GET STARTED?" description_line1="Let us help you bring certainty to your next project." description_line2="We’ll take care of the numbers and drawings — you focus on building." buttonText="Get Started" buttonPath="/contact" />
+    <CTASection title="READY TO GET STARTED?" description_line1="Let us help you bring certainty to your next project." description_line2="We’ll take care of the numbers and drawings — you focus on building." buttonText="Request a Quote" buttonPath="/contact" />
     <Footer/>
     </>
   )

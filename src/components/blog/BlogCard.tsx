@@ -13,6 +13,9 @@ const BlogCard: React.FC<BlogCardProps> = ({ image, title, date, onClick }) => {
       className="rounded-2xl border border-primary-300 px-5 sm:px-8 md:px-10 lg:px-12 xl:px-13 pt-10 sm:pt-8 md:pt-12 lg:pt-15 xl:pt-17  pb-7 sm:pb-8 md:pb-9 lg:pb-10 xl:pb-11 bg-black/60 hover:shadow-lg transition-shadow duration-300 cursor-pointer flex flex-col h-full"
       onClick={onClick}
       style={{ minHeight: "100%" }}
+      tabIndex={0}
+      role="button"
+      onKeyPress={e => { if (e.key === 'Enter' || e.key === ' ') onClick?.(); }}
     >
       <div className="rounded-xl overflow-hidden aspect-[16/10] mb-4">
         <img

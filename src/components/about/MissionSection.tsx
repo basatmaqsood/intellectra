@@ -6,8 +6,8 @@ const MissionSection: React.FC = () => {
       
       
       {/* Circle - Left Side - Fixed Width */}
-      <div className="flex justify-center mb-8 lg:mb-0 lg:w-80 xl:w-96 2xl:w-[400px] lg:flex-shrink-0">
-        <div className="relative w-48 h-48 sm:w-72 sm:h-72 md:w-80 md:h-80  xl:w-96 xl:h-96 rounded-full border-2 border-accent2-300  flex items-center justify-center">
+      <div className="flex justify-center mb-8 lg:mb-0 lg:w-84 xl:w-96 2xl:w-[400px] lg:flex-shrink-0">
+        <div className="relative w-48 h-48 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-84 lg:h-84 xl:w-96 xl:h-96 rounded-full border-2 border-accent2-300  flex items-center justify-center">
           <h3 className="heading-2 text-accent2-300 uppercase font-bold text-center">
             MISSION
           </h3>

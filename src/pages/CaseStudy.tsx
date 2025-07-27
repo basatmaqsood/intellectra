@@ -40,14 +40,14 @@ function CaseStudy() {
 
                     <div>
 
-                        <ContentSection heading="PROJECT SNAPSHOT" textSize="heading-6">
-                            <strong>Client:</strong> Urban BuildCo<br />
-                            <strong>Project Type:</strong> Senior Living High-rise mixed-use<br />
-                            <strong>Location:</strong> U.S. Urban Center<br />
-                            <strong>Height:</strong> 18 Stories<br />
-                            <strong>Units:</strong> 229 Residential Units<br />
-                            <strong>Special Features:</strong> United Community Health Center, Fitness & Wellness Spaces, Administrative Offices, Landscape Terrace<br />
-                            <strong>INTELLECTRA Services:</strong> Full-scope Estimation & Design Support
+                        <ContentSection heading="PROJECT SNAPSHOT">
+                            <p>Client Urban: BuildCo</p>
+                            <p>Project Type: Senior Living High-rise mixed-use</p>
+                            <p>Location: U.S. Urban Center</p>
+                            <p>Height: 18 Stories</p>
+                            <p>Units: 229 Residential Units</p>
+                            <p>Special Features: United Community Health Center, Fitness & Wellness Spaces, Administrative Offices, Landscape Terrace</p>
+                            <p>INTELLECTRA Services: Full-scope Estimation & Design Support</p>
                         </ContentSection>
 
                         {/* Image */}
@@ -78,7 +78,7 @@ function CaseStudy() {
                         We faced a highly complex mixed-use design, with each zone—residential, healthcare, and recreational—demanding unique technical solutions. A compressed timeline and strict budget left no room for revisions or cost overruns. Coordinating across multiple stakeholders made precision and alignment critical at every stage.                        </ContentSection>
 
                         {/* Images Grid */}
-                        <div className="grid grid-cols-2 gap-2 mb-7.5  sm:mb-15 md:mb-20 lg:mb-25 xl:mb-30">
+                        <div className="grid grid-cols-2 gap-4 mb-7.5  sm:mb-15 md:mb-20 lg:mb-25 xl:mb-30">
                             <img src="/images/casestudy/casestudy-3-1.png" alt="Construction Site" className="w-full h-full rounded-lg" />
                             <img src="/images/casestudy/casestudy-3-2.png" alt="Building Framework" className="w-full h-full rounded-lg" />
                             <img src="/images/casestudy/casestudy-3-3.png" alt="Construction Workers" className="w-full h-full rounded-lg" />
@@ -101,7 +101,7 @@ function CaseStudy() {
                 title="PLANNING SOMETHING BIG?"
                 description_line1="Let's see what new INTELLECTRA can bring to your next build — from smart applications to your next bigger"
                 description_line2="vision. Contact us and find out!"
-                buttonText="Contact Us Now"
+                buttonText="Request a Quote"
                 buttonPath="/contact"
             />
             <Footer />

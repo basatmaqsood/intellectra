@@ -31,7 +31,7 @@ function About() {
     <WhoWeAreSection />
     <TeamDescriptionSection />
     <ValuesSection />
-    <CTASection title="LET'S BUILD WITH CERTAiNTY" description_line1="We believe great projects start with smart foundations." description_line2="Let INTELLECTRA be the silent force behind your success — with accurate numbers, detailed drawings, and documents you can count on." buttonText="Get Started" buttonPath="/contact" />
+    <CTASection title="LET'S BUILD WITH CERTAiNTY" description_line1="We believe great projects start with smart foundations." description_line2="Let INTELLECTRA be the silent force behind your success — with accurate numbers, detailed drawings, and documents you can count on." buttonText="Request a Quote" buttonPath="/contact" />
     <Footer/>
     </>
   )

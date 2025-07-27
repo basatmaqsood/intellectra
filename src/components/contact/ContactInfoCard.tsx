@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactInfoCard: React.FC = () => {
   return (
-    <div className="order-1 sm:order-2 w-full h-full bg-[#251305] backdrop-blur-sm border-2 border-primary-300 rounded-2xl p-7 sm:p-10 md:p-15 lg:p-20  xl:p-36 flex flex-col">
+    <div className="order-1 sm:order-2 w-full h-full bg-[#251305] backdrop-blur-sm border-2 border-primary-300 rounded-2xl p-7 sm:p-10 md:p-12 lg:p-20  xl:p-36 flex flex-col">
       <div className="flex-1 flex flex-col justify-center space-y-6">
         {/* Header */}
         <div>

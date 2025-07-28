@@ -88,10 +88,10 @@ function Blog() {
                             <strong>Step 3: Selecting Estimation Techniques:</strong>
                             <p>We choose from a range of estimation techniques based on project needs:</p>
                             <ul>
-                                <li>· Point estimates for specific deliverables</li>
-                                <li>· Three-point estimation for evaluating risk and variability</li>
-                                <li>· Parametric estimation for scalable, data-driven cost modeling</li>
-                                <li>· Agile approaches like planning poker, t-shirt sizing, and the Fibonacci sequence to estimate user stories and story points</li>
+                                <li>• Point estimates for specific deliverables</li>
+                                <li>• Three-point estimation for evaluating risk and variability</li>
+                                <li>• Parametric estimation for scalable, data-driven cost modeling</li>
+                                <li>• Agile approaches like planning poker, t-shirt sizing, and the Fibonacci sequence to estimate user stories and story points</li>
                             </ul>
                             <strong>Step 4: Expert Validation:</strong>
                             <p>Estimates are reviewed by seasoned project managers, estimators, and engineers who apply expert judgment to validate assumptions, address uncertainties, and fine-tune outputs.</p>
@@ -157,7 +157,7 @@ function Blog() {
                         </ContentSection>
 
                         <ContentSection heading="HOW INTELLECTRA DELIVERED" className='mb-0'>
-                            Our team provThe Sol on Park project required a strategic blend of cost control, design clarity, and timeline sensitivity due to its high-rise structure and multi-functional use. INTELLECTRA began with a comprehensive project scope analysis, ensuring close alignment with architects, developers, and engineering consultants.ided comprehensive MEP estimation and shop drawings that enabled the contractor to submit a winning bid and complete the project successfully:
+                            The Sol on Park project required a strategic blend of cost control, design clarity, and timeline sensitivity due to its high-rise structure and multi-functional use. INTELLECTRA began with a comprehensive project scope analysis, ensuring close alignment with architects, developers, and engineering consultants.
                         </ContentSection>
 
                         <ContentSection className='mb-0'>

@@ -4,7 +4,8 @@ const CaseStudyChangingText: React.FC = () => {
   const challenges = [
     "Financial\nConstraints",
     "Complex\nProgram", 
-    "Stakeholder\nIntegration"
+    "Stakeholder\nIntegration",
+    "Compressed\nTimeline"
   ];
 
   const [currentChallengeIndex, setCurrentChallengeIndex] = useState(0);

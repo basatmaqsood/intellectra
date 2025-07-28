@@ -186,12 +186,12 @@ const ContactForm: React.FC = () => {
           isSubmitting: false
         });
 
-        toast.success('Thank you! Your message has been sent successfully. We\'ll get back to you soon.', {
+        toast.success('Thank you for contacting us. We\'ll get back to you soon.', {
           theme: 'dark',
           style: {
             backgroundColor: '#000',
             color: '#ffffff',
-            border: '1px solid #F59E0B'
+            border: '1px solid #FFF'
           }
         });
 
@@ -215,7 +215,7 @@ const ContactForm: React.FC = () => {
         style: {
           backgroundColor: '#000',
           color: '#ffffff',
-          border: '1px solid #ef4444'
+          border: '1px solid #FFF'
         }
       });
     }

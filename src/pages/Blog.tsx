@@ -60,7 +60,7 @@ function Blog() {
 
                         <ContentSection heading="OUR SERVICES">
                             INTELLECTRA offers a wide array of estimation and design services that cater to diverse industries:<br/>
-                            <strong>• M&amp;P Estimation</strong>
+                            <strong>• MEP Estimation</strong>
                             <p>Complete estimates for mechanical, electrical, and plumbing systems, ensuring compliance and field-readiness.</p>
                             <strong>• IT Estimation</strong>
                             <p>Smart projections for software systems, data platforms, and digital infrastructure.</p>

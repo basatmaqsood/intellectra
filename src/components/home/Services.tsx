@@ -9,7 +9,7 @@ interface ServicesSectionProps {
 const servicesData = [
     {
         icon: Icons.MEP,
-        title: "M&P Estimation",
+        title: "MEP Estimation",
         description: "End-to-end cost forecasting for mechanical, electrical, and plumbing systems, backed by codes and construction realities."
     },
     {

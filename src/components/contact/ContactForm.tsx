@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
-import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+// reCAPTCHA removed
 import { LinkButton } from '../../stories/components/Button';
 
 interface ContactFormData {
@@ -9,6 +9,13 @@ interface ContactFormData {
   email: string;
   phone: string;
   message: string;
+}
+
+// Honeypot fields - these should remain empty for legitimate users
+interface HoneypotFields {
+  email_confirm: string;  // Bots often target email confirmation fields
+  website: string;        // Common honeypot field name
+  additional_info: string; // Another field bots might fill
 }
 
 interface FormStatus {
@@ -30,13 +37,23 @@ const ContactForm: React.FC = () => {
     message: ''
   });
 
+  // Honeypot fields state - separate from main form data
+  const [honeypotData, setHoneypotData] = useState<HoneypotFields>({
+    email_confirm: '',
+    website: '',
+    additional_info: ''
+  });
+
   const [status, setStatus] = useState<FormStatus>({
     isSubmitting: false
   });
 
   const [errors, setErrors] = useState<FormErrors>({});
+  
+  // Track form interaction start time for timing-based bot detection
+  const formStartTimeRef = useRef<number>(Date.now());
 
-  const { executeRecaptcha } = useGoogleReCaptcha();
+  // reCAPTCHA removed
 
   // Validation functions
   const validateName = (name: string): string | undefined => {
@@ -60,16 +77,6 @@ const ContactForm: React.FC = () => {
     const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
     if (!emailRegex.test(email.trim())) {
       return 'Please enter a valid email address';
-    }
-    // Additional checks for common issues
-    if (email.trim().length > 254) {
-      return 'Email address is too long';
-    }
-    if (email.trim().includes('..')) {
-      return 'Email address cannot contain consecutive dots';
-    }
-    if (email.trim().startsWith('.') || email.trim().endsWith('.')) {
-      return 'Email address cannot start or end with a dot';
     }
     return undefined;
   };
@@ -101,20 +108,52 @@ const ContactForm: React.FC = () => {
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
-    
     newErrors.fullName = validateName(formData.fullName);
     newErrors.email = validateEmail(formData.email);
     newErrors.phone = validatePhone(formData.phone);
     newErrors.message = validateMessage(formData.message);
-
     setErrors(newErrors);
-
     // Return true if no errors
     return !Object.values(newErrors).some(error => error !== undefined);
   };
 
+  // Bot detection function - checks honeypot fields and submission timing
+  const detectBot = (): boolean => {
+    // Check if any honeypot field has been filled
+    const honeypotFilled = Object.values(honeypotData).some(value => value.trim() !== '');
+    
+    // Check if form was submitted too quickly (less than 3 seconds)
+    const submissionTime = Date.now();
+    const timeTaken = submissionTime - formStartTimeRef.current;
+    const tooFast = timeTaken < 3000; // 3 seconds minimum
+    
+    if (honeypotFilled || tooFast) {
+      // Log bot attempt for monitoring (optional)
+      console.warn('Bot submission detected:', {
+        honeypotFilled,
+        tooFast,
+        timeTaken,
+        honeypotValues: honeypotData
+      });
+      return true;
+    }
+    
+    return false;
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+    
+    // Handle honeypot fields separately
+    if (name in honeypotData) {
+      setHoneypotData(prev => ({
+        ...prev,
+        [name]: value
+      }));
+      return;
+    }
+    
+    // Handle regular form fields
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -139,6 +178,14 @@ const ContactForm: React.FC = () => {
       return;
     }
     
+    // Bot detection - silently reject if bot detected
+    if (detectBot()) {
+      // Don't give any feedback to potential bots
+      // Just reset the form and return silently
+      setStatus({ isSubmitting: false });
+      return;
+    }
+    
     // Validate form before submission
     if (!validateForm()) {
       // Don't show toast for validation errors, just return
@@ -146,30 +193,14 @@ const ContactForm: React.FC = () => {
       return;
     }
 
-    // Check if reCAPTCHA is available
-    if (!executeRecaptcha) {
-      toast.error('reCAPTCHA not available. Please refresh the page and try again.', {
-        theme: 'dark',
-        style: {
-          backgroundColor: '#000',
-          color: '#ffffff',
-          border: '1px solid #ef4444'
-        }
-      });
-      return;
-    }
+    // reCAPTCHA check removed
 
     setStatus({
       isSubmitting: true
     });
 
     try {
-      // Execute reCAPTCHA
-      const recaptchaToken = await executeRecaptcha('contact_form');
-      
-      if (!recaptchaToken) {
-        throw new Error('Failed to get reCAPTCHA token');
-      }
+      // reCAPTCHA execution removed
 
       // Get Email.js configuration from environment variables
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -193,14 +224,13 @@ const ContactForm: React.FC = () => {
       // Initialize Email.js with public key
       emailjs.init(publicKey);
 
-      // Prepare template parameters (including reCAPTCHA token)
+      // Prepare template parameters
       const templateParams = {
         from_name: formData.fullName,
         from_email: formData.email,
         phone: formData.phone,
         message: formData.message,
         to_name: 'Intellectra Team',
-        recaptcha_token: recaptchaToken, // Include token for server-side verification
       };
 
       // Send email using Email.js
@@ -220,14 +250,22 @@ const ContactForm: React.FC = () => {
           }
         });
 
-        // Reset form data and errors
+        // Reset form data, errors, and honeypot fields
         setFormData({
           fullName: '',
           email: '',
           phone: '',
           message: ''
         });
+        setHoneypotData({
+          email_confirm: '',
+          website: '',
+          additional_info: ''
+        });
         setErrors({});
+        
+        // Reset form start time for next submission
+        formStartTimeRef.current = Date.now();
       }
     } catch (error) {
       console.error('Form submission failed:', error);
@@ -249,6 +287,72 @@ const ContactForm: React.FC = () => {
   return (
     <div className="w-full h-full flex flex-col order-2 sm:order-1">
       <form onSubmit={handleSubmit} className="flex flex-col body-text h-full space-y-4">
+        {/* 
+          HONEYPOT FIELDS - These are hidden from users but visible to bots
+          Multiple hiding techniques used for robust concealment
+        */}
+        <div style={{ position: 'absolute', left: '-9999px', top: '-9999px' }}>
+          <input
+            type="email"
+            name="email_confirm"
+            placeholder="Confirm your email"
+            value={honeypotData.email_confirm}
+            onChange={handleChange}
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            className="absolute -left-[9999px] opacity-0 h-0 w-0 invisible"
+            style={{
+              position: 'absolute',
+              left: '-9999px',
+              visibility: 'hidden',
+              display: 'none',
+              opacity: 0,
+              height: 0,
+              width: 0
+            }}
+          />
+          <input
+            type="url"
+            name="website"
+            placeholder="Your website"
+            value={honeypotData.website}
+            onChange={handleChange}
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            className="absolute -left-[9999px] opacity-0 h-0 w-0 invisible"
+            style={{
+              position: 'absolute',
+              left: '-9999px',
+              visibility: 'hidden',
+              display: 'none',
+              opacity: 0,
+              height: 0,
+              width: 0
+            }}
+          />
+          <textarea
+            name="additional_info"
+            placeholder="Additional information"
+            value={honeypotData.additional_info}
+            onChange={handleChange}
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            className="absolute -left-[9999px] opacity-0 h-0 w-0 invisible"
+            style={{
+              position: 'absolute',
+              left: '-9999px',
+              visibility: 'hidden',
+              display: 'none',
+              opacity: 0,
+              height: 0,
+              width: 0
+            }}
+          />
+        </div>
+
         {/* Full Name Field */}
         <div>
           <input

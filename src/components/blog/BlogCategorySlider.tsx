@@ -53,7 +53,7 @@ const BlogCategorySlider: React.FC<BlogCategorySliderProps> = ({ categories, sel
         ))}
       </div>
       <button
-        className="min-w-10 min-h-10 w-10 h-10 max-w-10 max-h-10 flex items-center justify-center rounded-full border border-primary-300 text-primary-300 hover:bg-primary-300 hover:text-black transition-colors p-0"
+        className="min-w-10 min-h-10 w-10 h-10 max-w-10 max-h-10 flex items-center justify-center rounded-full border border-primary-300 text-primary-300 hover:bg-primary-300 hover:text-white transition-colors p-0"
         onClick={handleNext}
         aria-label="Scroll categories right"
         type="button"

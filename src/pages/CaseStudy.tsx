@@ -41,13 +41,13 @@ function CaseStudy() {
                     <div>
 
                         <ContentSection heading="PROJECT SNAPSHOT">
-                            <p>Client Urban: BuildCo</p>
-                            <p>Project Type: Senior Living High-rise mixed-use</p>
-                            <p>Location: U.S. Urban Center</p>
-                            <p>Height: 18 Stories</p>
-                            <p>Units: 229 Residential Units</p>
-                            <p>Special Features: United Community Health Center, Fitness & Wellness Spaces, Administrative Offices, Landscape Terrace</p>
-                            <p>INTELLECTRA Services: Full-scope Estimation & Design Support</p>
+                            <p><strong>Client Urban:</strong> BuildCo</p>
+                            <p><strong>Project Type:</strong> Senior Living High-rise mixed-use</p>
+                            <p><strong>Location:</strong> U.S. Urban Center</p>
+                            <p><strong>Height:</strong> 18 Stories</p>
+                            <p><strong>Units:</strong> 229 Residential Units</p>
+                            <p><strong>Amenity Spaces:</strong> United Community Health Center, Gym, Offices, Landscape Terrace</p>
+                            <p><strong>INTELLECTRA Services:</strong> Full-scope Estimation & Design Support</p>
                         </ContentSection>
 
                         {/* Image */}

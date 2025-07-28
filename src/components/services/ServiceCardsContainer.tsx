@@ -120,8 +120,8 @@ const ServiceCardsContainer: React.FC = () => {
                         let titleColorClass = "text-primary-300"; // Default orange
                         let backgroundClass = ""; // Default dark brown gradient with 66% black
                         
-                        if (service.title === "SHOP DRAWINGS" || service.title === "MEP ESTIMATION" || service.title === "ENGINEERING DOCUMENTATION") {
-                            titleColorClass = "text-accent2-300"; // Teal color
+                        if (service.title === "SHOP DRAWINGS" || service.title === "MEP ESTIMATION" || service.title === "ENGINEERING DOCUMENTS") {
+                            titleColorClass = "text-accent2-400"; // Teal color
                             backgroundClass = ""; // Teal gradient with 66% black
                         } 
                         

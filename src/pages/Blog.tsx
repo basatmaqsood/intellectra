@@ -59,16 +59,16 @@ function Blog() {
                         </ContentSection>
 
                         <ContentSection heading="OUR SERVICES">
-                            INTELLECTRA offers a wide array of estimation and design services that cater to diverse industries:
-                            <p className='text-primary-300'>• M&amp;P Estimation</p>
+                            INTELLECTRA offers a wide array of estimation and design services that cater to diverse industries:<br/>
+                            <strong>• M&amp;P Estimation</strong>
                             <p>Complete estimates for mechanical, electrical, and plumbing systems, ensuring compliance and field-readiness.</p>
-                            <p className='text-primary-300'>• IT Estimation</p>
+                            <strong>• IT Estimation</strong>
                             <p>Smart projections for software systems, data platforms, and digital infrastructure.</p>
-                            <p className='text-primary-300'>• Electrical Estimation</p>
+                            <strong>• Electrical Estimation</strong>
                             <p>In-depth cost breakdowns for lighting, control systems, cabling, and power distribution.</p>
-                            <p className='text-primary-300'>• Shop Drawings</p>
+                            <strong>• Shop Drawings</strong>
                             <p>Field-optimized technical drawings for coordination and compliance.</p>
-                            <p className='text-primary-300'>• Engineering Documentation</p>
+                            <strong>• Engineering Documentation</strong>
                             <p>BOQs, technical specs, and reports that support approval processes and seamless execution.</p>
                         </ContentSection>
 
@@ -81,11 +81,11 @@ function Blog() {
                         </div>
 
                         <ContentSection heading="THE ESTIMATION PROCESS">
-                            <p className='text-primary-300'>Step 1: Understanding the Project Scope:</p>
+                            <strong>Step 1: Understanding the Project Scope:</strong>
                             <p>The first step in any estimation process is defining the project scope. This is where INTELLECTRA brings together stakeholders to develop a shared understanding of deliverables, dependencies, and constraints. Whether it’s a small IT project or a large construction project, alignment at this stage sets the foundation for everything that follows.</p>
-                            <p className='text-primary-300'>Step 2: Data Collection and Analysis:</p>
+                            <strong>Step 2: Data Collection and Analysis:</strong>
                             <p>We collect historical data from previously completed successful projects to guide our cost modeling. These insights are paired with real-time analytics to improve cost estimation and decision-making.</p>
-                            <p className='text-primary-300'>Step 3: Selecting Estimation Techniques:</p>
+                            <strong>Step 3: Selecting Estimation Techniques:</strong>
                             <p>We choose from a range of estimation techniques based on project needs:</p>
                             <ul>
                                 <li>· Point estimates for specific deliverables</li>
@@ -93,10 +93,10 @@ function Blog() {
                                 <li>· Parametric estimation for scalable, data-driven cost modeling</li>
                                 <li>· Agile approaches like planning poker, t-shirt sizing, and the Fibonacci sequence to estimate user stories and story points</li>
                             </ul>
-                            <p className='text-primary-300'>Step 4: Expert Validation:</p>
+                            <strong>Step 4: Expert Validation:</strong>
                             <p>Estimates are reviewed by seasoned project managers, estimators, and engineers who apply expert judgment to validate assumptions, address uncertainties, and fine-tune outputs.</p>
-                            <p className='text-primary-300'>Step 5: Tool-Based Accuracy:</p>
-                            We deploy top-tier estimating software tailored to software development, MEP planning, and infrastructure analysis. These tools bring transparency, consistency, and speed to our processes, resulting in higher estimation accuracy.
+                            <strong>Step 5: Tool-Based Accuracy:</strong>
+                            <p>We deploy top-tier estimating software tailored to software development, MEP planning, and infrastructure analysis. These tools bring transparency, consistency, and speed to our processes, resulting in higher estimation accuracy.</p>
                         </ContentSection>
 
                         {/* Image */}
@@ -177,12 +177,12 @@ function Blog() {
                                 <li>· Budget adherence ensured by accurate project cost forecasts</li>
                                 <li>· Smooth approvals enabled by professionally developed documentation</li>
                             </ul>
-                            <p className='text-primary-300'>Overall outcome:</p>
+                            <strong>Overall outcome:</strong>
                             <ul>
                                 <li>· A successful project that stayed within scope, cost, and time parameters</li>
                                 <li>· Ensuring Estimation Accuracy</li>
                             </ul>
-                            <p>We prioritize estimation integrity with the following:</p>
+                            <strong>We prioritize estimation integrity with the following:</strong>
                             <ul>
                                 <li>· Cross-team validation using accurate estimate synonym checklists</li>
                                 <li>· Automated comparisons for accurate estimate meaning vs. real outcomes</li>

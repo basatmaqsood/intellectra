@@ -12,7 +12,7 @@ const BlogCategoryNav: React.FC<BlogCategoryNavProps> = ({ categories, selected,
   return (
     <div className="flex items-center justify-center gap-2 md:gap-4 mb-8 md:mb-12">
       <button
-        className="w-10 h-10 flex items-center justify-center rounded-full border border-primary-300 text-primary-300 hover:bg-primary-300 hover:text-black transition-colors"
+        className="w-10 h-10 flex items-center justify-center rounded-full border border-primary-300 text-primary-300 hover:bg-primary-300 hover:text-white transition-colors"
         onClick={onPrev}
         aria-label="Previous"
         type="button"
@@ -23,7 +23,7 @@ const BlogCategoryNav: React.FC<BlogCategoryNavProps> = ({ categories, selected,
         {categories.map((cat) => (
           <button
             key={cat}
-            className={`px-4 py-1.5 rounded-full border border-primary-300 text-base md:text-lg font-medium transition-colors whitespace-nowrap ${selected === cat ? "bg-primary-300 text-black" : "text-primary-300 hover:bg-primary-300 hover:text-black"}`}
+            className={`px-4 py-1.5 rounded-full border border-primary-300 text-base md:text-lg font-medium transition-colors whitespace-nowrap ${selected === cat ? "bg-primary-300 text-white" : "text-primary-300 hover:bg-primary-300 hover:text-white"}`}
             onClick={() => onSelect(cat)}
             type="button"
           >
@@ -32,7 +32,7 @@ const BlogCategoryNav: React.FC<BlogCategoryNavProps> = ({ categories, selected,
         ))}
       </div>
       <button
-        className="w-10 h-10 flex items-center justify-center rounded-full border border-primary-300 text-primary-300 hover:bg-primary-300 hover:text-black transition-colors"
+        className="w-10 h-10 flex items-center justify-center rounded-full border border-primary-300 text-primary-300 hover:bg-primary-300 hover:text-white transition-colors"
         onClick={onNext}
         aria-label="Next"
         type="button"

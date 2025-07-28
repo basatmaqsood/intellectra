@@ -14,32 +14,32 @@ const categories = [
 
 const allBlogs: (Blog & { category: string; link: string })[] = [
   {
-    image: "/images/blog/blog-1.png",
+    image: "/images/blogListing/blog-1.png",
     title: "How We Deliver Precise Estimation",
     date: "July 30, 2025",
     category: "Estimation Strategy",
     link: "/blog/how-we-deliver",
   },
   {
-    image: "/images/blog/blog-2-1.png",
+    image: "/images/blogListing/blog-2.jpg",
     title: "Built Smarter by Thinking Deeper First",
     date: "May 20, 2025",
     category: "Data-Driven Design",
-    link: "/blog/how-we-deliver",
+    link: "",
   },
   {
-    image: "/images/blog/blog-3.png",
+    image: "/images/blogListing/blog-3.jpg",
     title: "Blueprints Guide You, Numbers Decide All",
     date: "April 28, 2025",
     category: "Innovation & Tools",
-    link: "/blog/how-we-deliver",
+    link: "",
   },
   {
-    image: "/images/blog/blog-4.png",
+    image: "/images/blogListing/blog-4.jpg",
     title: "Future Estimation, Smarter Builds",
     date: "March 30, 2025",
     category: "Technical Documentation",
-    link: "/blog/how-we-deliver",
+    link: "",
   },
 ];
 

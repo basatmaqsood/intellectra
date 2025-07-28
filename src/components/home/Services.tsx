@@ -64,7 +64,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ className = "" }) => 
                 {/* Services Grid */}
                 <div className="">
                     {/* Single responsive grid for all breakpoints */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 place-items-center">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-7 md:gap-8  place-items-center">
                         {servicesData.map((service, index) => (
                             <ServiceCard
                                 key={index}

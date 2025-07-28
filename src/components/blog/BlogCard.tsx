@@ -10,7 +10,7 @@ interface BlogCardProps {
 const BlogCard: React.FC<BlogCardProps> = ({ image, title, date, onClick }) => {
   return (
     <div
-      className="rounded-2xl border border-primary-300 px-5 sm:px-8 md:px-10 lg:px-12 xl:px-13 pt-10 sm:pt-8 md:pt-12 lg:pt-15 xl:pt-17  pb-7 sm:pb-8 md:pb-9 lg:pb-10 xl:pb-11 bg-black/60 hover:shadow-lg transition-shadow duration-300 cursor-pointer flex flex-col h-full"
+      className="rounded-2xl border border-transparent hover:border-primary-300 transition-all duration-200 ease-in px-5 sm:px-8 md:px-10 lg:px-12 xl:px-13 pt-10 sm:pt-8 md:pt-12 lg:pt-15 xl:pt-17 pb-7 sm:pb-8 md:pb-9 lg:pb-10 xl:pb-11 bg-black/60 hover:shadow-lg cursor-pointer flex flex-col h-full transform hover:scale-[1.03]"
       onClick={onClick}
       style={{ minHeight: "100%" }}
       tabIndex={0}

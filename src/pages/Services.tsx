@@ -32,7 +32,7 @@ function Services() {
     <>
     <HeroSection headline={headlineData} tagline={taglineData} backgroundImage='/images/services-bg.png'/>
     <ServiceCardsContainer />
-    <CTASection title="WANT TO LEARN MORE" description_line1="We're proud to have supported over 120+ projects and 45+ winning bids with a 99.7% on-time delivery rate. Our estimators, drafters, and engineers are in-house—real professionals who understand what's at stake." buttonText="Request a Quote" buttonPath="/contact" />
+    <CTASection title="WANT TO LEARN MORE" description_line1="We're proud to have supported over 120+ projects and 150+ winning bids with a 99.7% on-time delivery rate. Our estimators, drafters, and engineers are in-house—real professionals who understand what's at stake." buttonText="Request a Quote" buttonPath="/contact" />
     <Footer />
     </>
     )

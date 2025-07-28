@@ -59,7 +59,7 @@ const TrackRecordSection: React.FC<TrackRecordSectionProps> = ({ className = "" 
                     </div>
 
                     {/* Tablet: 2x2 grid layout (sm to md) */}
-                    <div className="hidden sm:grid md:hidden sm:grid-cols-2 sm:gap-6 sm:max-w-[500px] sm:mx-auto">
+                    <div className="hidden sm:grid md:hidden sm:grid-cols-2 sm:gap-7 sm:max-w-[500px] sm:mx-auto">
                         {trackRecordData.map((item, index) => (
                             <TrackRecordCard
                                 key={index}

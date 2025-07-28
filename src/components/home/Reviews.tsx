@@ -62,7 +62,7 @@ const ReviewsSection: React.FC<ReviewsSectionProps> = ({ className = "" }) => {
                 </h2>
 
                 {/* Reviews Layout */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-7 md:gap-8">
                     {/* Left Column: Construction Group and Urban BuildCo */}
                     <div className="flex flex-col space-y-6 sm:space-y-8">
                         <ReviewCard

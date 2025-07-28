@@ -3,7 +3,9 @@ import React from 'react';
 const MissionSection: React.FC = () => {
   return (
     <div className="w-full overflow-hidden h-full bg-[url('/images/mission-bg.png')] bg-cover bg-center bg-no-repeat flex flex-col lg:flex-row lg:items-center lg:justify-center gap-8 md:gap-12 lg:gap-16 xl:gap-20 px-8 sm:px-12 md:px-16 lg:px-20 xl:px-32 2xl:px-60 py-50 sm:py-75 md:py-60">
-
+      <span className="sr-only">
+        Futuristic digital circuit board background illustrating technological innovation, precision estimation, and smart solutions at the core of Intellectra’s mission in the construction and engineering industry.
+      </span>
 
       {/* Circle - Left Side - Fixed Width */}
       <div className="flex justify-center mb-8 lg:mb-0 lg:w-84 xl:w-96 2xl:w-[400px] lg:flex-shrink-0">
@@ -27,4 +29,4 @@ const MissionSection: React.FC = () => {
   );
 };
 
-export default MissionSection; 
+export default MissionSection;

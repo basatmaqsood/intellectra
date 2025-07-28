@@ -2,6 +2,7 @@ import HeroSection from '../components/SimpleHero'
 import Footer from '../components/Footer'
 import ContentSection from '../components/ContentSection'
 import GradientBg from '../components/Blog-gradient-bg'
+import { Helmet } from 'react-helmet-async';
 
 function Blog() {
     const headlineData = {
@@ -28,7 +29,11 @@ function Blog() {
 
     return (
         <>
-            <HeroSection headline={headlineData} tagline={taglineData} backgroundImage='/images/blog-bg.png' />
+            <Helmet>
+                <title>Blog | INTELLECTRA</title>
+                <meta name="description" content="Go behind the scenes with INTELLECTRA to discover how expert teams, Agile techniques, and advanced tools ensure unmatched accuracy in project estimation." />
+            </Helmet>
+            <HeroSection headline={headlineData} tagline={taglineData} backgroundImage='/images/blog-bg.png' backgroundAlt="Modern high-rise construction site with cranes and scaffolding, representing INTELLECTRA's precise estimation services." />
 
             {/* Blog Content */}
             <section className="w-full relative py-14 sm:py-20 md:py-24 lg:py-28 xl:py-32">
@@ -77,7 +82,7 @@ function Blog() {
 
                         {/* Image */}
                         <div className="w-full h-full mb-7.5  sm:mb-15 md:mb-20 lg:mb-25 xl:mb-30">
-                            <img src="/images/blog/blog-1.png" alt="Estimation Process" className="w-full rounded-lg" />
+                            <img src="/images/blog/blog-1.png" alt="Digital 3D rendering of a smart building model, symbolizing data-driven estimation and design accuracy." className="w-full rounded-lg" />
                         </div>
 
                         <ContentSection heading="THE ESTIMATION PROCESS">
@@ -101,8 +106,8 @@ function Blog() {
 
                         {/* Image */}
                         <div className="w-full h-full flex flex-row justify-between mb-7.5  sm:mb-15 md:mb-20 lg:mb-25 xl:mb-30">
-                            <img src="/images/blog/blog-2-1.png" alt="Agile Estimation" className="w-[48%] rounded-lg" />
-                            <img src="/images/blog/blog-2-2.png" alt="Agile Estimation" className="w-[48%] rounded-lg" />
+                            <img src="/images/blog/blog-2-1.png" alt="Visual comparison of industrial facility models used to demonstrate Agile estimation techniques and technical planning." className="w-[48%] rounded-lg" />
+                            <img src="/images/blog/blog-2-2.png" alt="Diverse project team collaborating with sticky notes on a glass wall during an agile planning session, reflecting modern project estimation techniques and effective team communication at Intellectra." className="w-[48%] rounded-lg" />
                         </div>
 
                         <ContentSection heading="AGILE ESTIMATION IN PRACTICE" className='mb-0'>
@@ -128,7 +133,7 @@ function Blog() {
 
                         {/* Image */}
                         <div className="w-full h-full mb-7.5  sm:mb-15 md:mb-20 lg:mb-25 xl:mb-30">
-                            <img src="/images/blog/blog-3.png" alt="Estimation Process" className="w-full rounded-lg" />
+                            <img src="/images/blog/blog-3.png" alt="Engineer using digital estimation tools to plan smarter construction decisions with real-time data." className="w-full rounded-lg" />
                         </div>
 
                         <ContentSection heading="TOOLS AND TECHNIQUES WE USE">
@@ -143,9 +148,9 @@ function Blog() {
 
                         {/* Image */}
                         <div className="w-full h-full flex flex-row justify-between mb-7.5  sm:mb-15 md:mb-20 lg:mb-25 xl:mb-30">
-                            <img src="/images/blog/blog-4.png" alt="Agile Estimation" className="w-[32%] rounded-lg" />
-                            <img src="/images/blog/blog-5.png" alt="Agile Estimation" className="w-[32%] rounded-lg" />
-                            <img src="/images/blog/blog-6.png" alt="Agile Estimation" className="w-[32%] rounded-lg" />
+                            <img src="/images/blog/blog-4.png" alt="Blueprint logo" className="w-[32%] rounded-lg" />
+                            <img src="/images/blog/blog-5.png" alt="Conest logo" className="w-[32%] rounded-lg" />
+                            <img src="/images/blog/blog-6.png" alt="Planswift logo" className="w-[32%] rounded-lg" />
                         </div>
 
                         <ContentSection heading="CASE STUDY: SOL ON PARK SENIOR LIVING HIGH RISE">
@@ -221,4 +226,4 @@ function Blog() {
     )
 }
 
-export default Blog 
+export default Blog

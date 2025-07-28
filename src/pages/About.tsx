@@ -4,6 +4,7 @@ import CTASection from '../components/CTA'
 import WhoWeAreSection from '../components/about/WhoWeAreSection'
 import TeamDescriptionSection from '../components/about/TeamDescriptionSection'
 import ValuesSection from '../components/about/ValuesSection'
+import { Helmet } from 'react-helmet-async';
 
 function About() {
 
@@ -27,7 +28,16 @@ function About() {
 
   return (
     <>
-    <HeroSection headline={headlineData} tagline={taglineData} backgroundImage='/images/about-bg.png'/>
+    <Helmet>
+      <title>About Us | INTELLECTRA</title>
+      <meta name="description" content="Discover how INTELLECTRA grew from a small team into a trusted partner in estimation and design—delivering clarity, accuracy, and smarter project outcomes." />
+    </Helmet>
+    <HeroSection 
+      headline={headlineData} 
+      tagline={taglineData} 
+      backgroundImage='/images/about-bg.png' 
+      backgroundAlt="Team of diverse professionals celebrating a successful project with high-fives in a modern office environment, symbolizing Intellectra’s collaborative foundation and engineering innovation."
+    />
     <WhoWeAreSection />
     <TeamDescriptionSection />
     <ValuesSection />

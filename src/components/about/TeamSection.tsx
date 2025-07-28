@@ -21,7 +21,9 @@ const TeamSection: React.FC = () => {
 
   return (
     <div className="bg-[url('/images/team-bg.png')] bg-cover bg-center bg-no-repeat flex flex-col lg:flex-row md:items-center md:justify-center gap-8 md:gap-16 lg:gap-16 xl:gap-20 px-8 sm:px-12 md:px-16 lg:px-20 xl:px-32 2xl:px-60 py-50 sm:py-75 md:py-60">
-      
+      <span className="sr-only">
+        Dimly lit conference room with professionals working at laptops; side panel introduces INTELLECTRA team members: Hasan Raza, Zara Saeed, and Adeel Khan with their roles.
+      </span>
 
       
       {/* Circle - Left Side - Fixed Width */}
@@ -70,4 +72,4 @@ const TeamSection: React.FC = () => {
   );
 };
 
-export default TeamSection; 
+export default TeamSection;

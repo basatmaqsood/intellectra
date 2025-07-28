@@ -6,9 +6,12 @@ import ScrollToTop from "./components/ScrollTop.tsx";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./index.css";
+import { HelmetProvider } from "react-helmet-async";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
+        <HelmetProvider>
+
     <BrowserRouter>
       <ScrollToTop />
       <App />
@@ -25,7 +28,8 @@ createRoot(document.getElementById("root")!).render(
         theme="dark"
         toastClassName="bg-gray-800 text-white border border-gray-700"
         progressClassName="bg-primary-300"
-      />
+        />
     </BrowserRouter>
+        </HelmetProvider>
   </StrictMode>
 );

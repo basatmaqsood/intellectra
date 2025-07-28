@@ -12,13 +12,14 @@ const categories = [
   "Risk Management"
 ];
 
-const allBlogs: (Blog & { category: string; link: string })[] = [
+const allBlogs: (Blog & { category: string; link: string; alt?: string })[] = [
   {
     image: "/images/blogListing/blog-1.png",
     title: "How We Deliver Precise Estimation",
     date: "July 30, 2025",
     category: "Estimation Strategy",
     link: "/blog/how-we-deliver",
+    alt: "Modern construction site with cranes representing precise MEP and electrical estimation for high-rise projects."
   },
   {
     image: "/images/blogListing/blog-2.jpg",
@@ -26,6 +27,7 @@ const allBlogs: (Blog & { category: string; link: string })[] = [
     date: "May 20, 2025",
     category: "Data-Driven Design",
     link: "",
+    alt: "Engineer using digital estimation tools to plan smarter construction decisions with real-time data."
   },
   {
     image: "/images/blogListing/blog-3.jpg",
@@ -33,6 +35,7 @@ const allBlogs: (Blog & { category: string; link: string })[] = [
     date: "April 28, 2025",
     category: "Innovation & Tools",
     link: "",
+    alt: "Tech professionals analyzing circuits, symbolizing the role of data and innovation in construction estimation."
   },
   {
     image: "/images/blogListing/blog-4.jpg",
@@ -40,6 +43,7 @@ const allBlogs: (Blog & { category: string; link: string })[] = [
     date: "March 30, 2025",
     category: "Technical Documentation",
     link: "",
+    alt: "Project team in a strategy meeting, discussing future-ready estimation solutions and smarter build approaches."
   },
 ];
 

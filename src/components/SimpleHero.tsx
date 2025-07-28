@@ -18,6 +18,7 @@ interface HeroSectionProps {
   // Background can be either an image URL or a solid color
   backgroundImage?: string
   backgroundColor?: string
+  backgroundAlt?: string // NEW
 
   // Content props - now supporting multi-line with highlighted words
   headline: {
@@ -37,6 +38,7 @@ interface HeroSectionProps {
 const HeroSection: React.FC<HeroSectionProps> = ({
   backgroundImage,
   backgroundColor,
+  backgroundAlt, // NEW
   headline,
   tagline,
   buttonComponent,
@@ -149,6 +151,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
   return (
     <div className="relative min-h-screen w-full bg-cover bg-center bg-no-repeat" style={backgroundStyle}>
+      {backgroundAlt && (
+        <span className="sr-only">{backgroundAlt}</span>
+      )}
       {/* Header with logo and hamburger menu - Dynamic positioning with glassmorphism */}
       <header className={`
         ${isScrolled || isMenuOpen ? 'fixed' : 'absolute'} 

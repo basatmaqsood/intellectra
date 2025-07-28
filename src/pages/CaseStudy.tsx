@@ -5,6 +5,7 @@ import ContentSection from '../components/ContentSection'
 import BlogGradientBackground from '../components/Blog-gradient-bg'
 import CaseStudyGradient from '../components/CaseStudyGradient'
 import CaseStudyChangingText from '../components/CaseStudyChangingText'
+import { Helmet } from 'react-helmet-async';
 
 function CaseStudy() {
     const headlineData = {
@@ -31,7 +32,11 @@ function CaseStudy() {
 
     return (
         <>
-            <HeroSection headline={headlineData} tagline={taglineData} backgroundImage='/images/casestudy-bg.png' />
+            <Helmet>
+                <title>Case Study | INTELLECTRA</title>
+                <meta name="description" content="See how INTELLECTRA helped deliver Sol on Park—a complex senior living high-rise—with precise estimation, shop drawings, and zero cost surprises." />
+            </Helmet>
+            <HeroSection headline={headlineData} tagline={taglineData} backgroundImage='/images/casestudy-bg.png' backgroundAlt="Modern residential complex with a luxury poolside area at sunset, representing Intellectra’s precision-driven estimation and smart design services for large-scale construction projects." />
 
             {/* Case Study Content */}
             <section className="w-full relative py-14 sm:py-20 md:py-24 lg:py-28 xl:py-32 overflow-hidden">
@@ -52,7 +57,7 @@ function CaseStudy() {
 
                         {/* Image */}
                         <div className="w-full h-full mb-7.5  sm:mb-15 md:mb-20 lg:mb-25 xl:mb-30">
-                            <img src="/images/casestudy/casestudy-1.png" alt="Sol on Park Building" className="w-full rounded-lg" />
+                            <img src="/images/casestudy/casestudy-1.png" alt="State-of-the-art 18-story residential tower at sunset, showcasing Sol on Park’s mixed-use architectural design and Intellectra’s full-scope estimation and design support for senior living housing." className="w-full rounded-lg" />
                         </div>
 
                         <ContentSection heading="PROJECT BACKGROUND" className='mb-0'>
@@ -71,7 +76,7 @@ function CaseStudy() {
 
                         {/* Image */}
                         <div className="w-full h-full mb-7.5  sm:mb-15 md:mb-20 lg:mb-25 xl:mb-30">
-                            <img src="/images/casestudy/casestudy-2.png" alt="Sol on Park Building" className="w-full rounded-lg" />
+                            <img src="/images/casestudy/casestudy-2.png" alt="Architectural rendering of a complex mixed-use high-rise with residential, healthcare, and recreational zones, highlighting Intellectra’s technical expertise in project estimation and design integration." className="w-full rounded-lg" />
                         </div>
 
                         <ContentSection heading="PROJECT CHALLENGES">
@@ -79,9 +84,9 @@ function CaseStudy() {
 
                         {/* Images Grid */}
                         <div className="grid grid-cols-2 gap-4 mb-7.5  sm:mb-15 md:mb-20 lg:mb-25 xl:mb-30">
-                            <img src="/images/casestudy/casestudy-3-1.png" alt="Construction Site" className="w-full h-full rounded-lg" />
-                            <img src="/images/casestudy/casestudy-3-2.png" alt="Building Framework" className="w-full h-full rounded-lg" />
-                            <img src="/images/casestudy/casestudy-3-3.png" alt="Construction Workers" className="w-full h-full rounded-lg" />
+                            <img src="/images/casestudy/casestudy-3-1.png" alt="High-rise construction site with cranes under a cloudy sky – representing mixed-use building development challenges" className="w-full h-full rounded-lg" />
+                            <img src="/images/casestudy/casestudy-3-2.png" alt="Architectural rendering of mixed-use residential and commercial tower – modern urban infrastructure design" className="w-full h-full rounded-lg" />
+                            <img src="/images/casestudy/casestudy-3-3.png" alt="Construction workers installing rooftop solar panels – sustainable energy integration in building projects" className="w-full h-full rounded-lg" />
                             <CaseStudyChangingText />
                         </div>
 
@@ -109,4 +114,4 @@ function CaseStudy() {
     )
 }
 
-export default CaseStudy 
+export default CaseStudy

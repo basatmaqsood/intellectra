@@ -8,6 +8,7 @@ import ServicesSection from '../components/home/Services'
 import TrackRecordSection from '../components/home/TrackRecord'
 import WhyChooseUsSection from '../components/home/WhyChooseUs'
 import { LinkButton } from '../stories/components/Button'
+import { Helmet } from 'react-helmet-async';
 
 const headlineData = {
     lines: [
@@ -49,7 +50,17 @@ const headlineData = {
 function Home() {
   return (
     <>
-    <HeroSection headline={headlineData} tagline={taglineData} backgroundImage='/images/hero-bg.png' buttonComponent = {<LinkButton path='/contact' showArrow>Get Started</LinkButton>}/>
+    <Helmet>
+      <title>Home | INTELLECTRA</title>
+      <meta name="description" content="Precision-driven Estimation & Design services for smarter, faster builds. Trusted by contractors, consultants & developers across industries." />
+    </Helmet>
+    <HeroSection 
+      headline={headlineData} 
+      tagline={taglineData} 
+      backgroundImage='/images/hero-bg.png' 
+      backgroundAlt="Aerial night view of a tech-forward city skyline with illuminated skyscrapers, representing innovation, smart infrastructure, and digital estimation solutions by Intellectra."
+      buttonComponent={<LinkButton path='/contact' showArrow>Get Started</LinkButton>}
+    />
     <AboutSection/>
     <ServicesSection/>
     <TrackRecordSection/>

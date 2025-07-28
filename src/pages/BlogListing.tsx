@@ -33,7 +33,12 @@ function BlogListing() {
 
   return (
     <>
-      <HeroSection headline={headlineData} tagline={taglineData} backgroundImage='/images/blog-listing-bg.png' />
+      <HeroSection 
+        headline={headlineData} 
+        tagline={taglineData} 
+        backgroundImage='/images/blog-listing-bg.png' 
+        backgroundAlt="Architectural workspace with blueprints, laptop, and drafting tools showcasing INTELLECTRA’s focus on precision estimation and smart construction planning."
+      />
       <BlogListingSection />
       <CTASection title="READY TO GET STARTED?" description_line1="Let us help you bring certainty to your next project." description_line2="We’ll take care of the numbers and drawings — you focus on building." buttonText="Request a Quote" buttonPath="/contact" />
       <Footer />

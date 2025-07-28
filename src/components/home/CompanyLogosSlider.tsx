@@ -9,13 +9,13 @@ interface CompanyLogosSliderProps {
 const CompanyLogosSlider: React.FC<CompanyLogosSliderProps> = ({ className = "" }) => {
     // Company logos - replace with actual paths
     const logos = [
-        "/images/companies/citibank.png",
-        "/images/companies/dominos.png",
-        "/images/companies/amazon.png",
-        "/images/companies/tesla.png",
-        "/images/companies/boa.png",
-        "/images/companies/linkedin.png",
-        "/images/companies/elf.png"
+        { src: "/images/companies/citibank.png", alt: "Citibank logo" },
+        { src: "/images/companies/dominos.png", alt: "Dominos logo" },
+        { src: "/images/companies/amazon.png", alt: "Amazon logo" },
+        { src: "/images/companies/tesla.png", alt: "Tesla logo" },
+        { src: "/images/companies/boa.png", alt: "Bank of America logo" },
+        { src: "/images/companies/linkedin.png", alt: "Linkedin logo" },
+        { src: "/images/companies/elf.png", alt: "e.l.f logo" }
     ]
 
     // Create two sets for seamless infinite loop
@@ -30,8 +30,8 @@ const CompanyLogosSlider: React.FC<CompanyLogosSliderProps> = ({ className = "" 
                             <div key={index} className="slide">
                                 <div className="slide-card">
                                     <img 
-                                        src={logo} 
-                                        alt={`Company logo ${(index % logos.length) + 1}`}
+                                        src={logo.src} 
+                                        alt={logo.alt}
                                         className="slide-image"
                                     />
                                 </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { LinkButton } from '../../stories/components/Button';
 
 interface ContactFormData {
@@ -34,6 +35,8 @@ const ContactForm: React.FC = () => {
   });
 
   const [errors, setErrors] = useState<FormErrors>({});
+
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   // Validation functions
   const validateName = (name: string): string | undefined => {
@@ -143,19 +146,14 @@ const ContactForm: React.FC = () => {
       return;
     }
 
-    // Get Email.js configuration from environment variables
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
-    // Check if all required environment variables are set
-    if (!serviceId || !templateId || !publicKey) {
-      toast.error('Email service configuration is missing. Please check environment variables.', {
+    // Check if reCAPTCHA is available
+    if (!executeRecaptcha) {
+      toast.error('reCAPTCHA not available. Please refresh the page and try again.', {
         theme: 'dark',
         style: {
-          backgroundColor: '#1f2937',
+          backgroundColor: '#000',
           color: '#ffffff',
-          border: '1px solid #374151'
+          border: '1px solid #ef4444'
         }
       });
       return;
@@ -166,16 +164,43 @@ const ContactForm: React.FC = () => {
     });
 
     try {
+      // Execute reCAPTCHA
+      const recaptchaToken = await executeRecaptcha('contact_form');
+      
+      if (!recaptchaToken) {
+        throw new Error('Failed to get reCAPTCHA token');
+      }
+
+      // Get Email.js configuration from environment variables
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      // Check if all required environment variables are set
+      if (!serviceId || !templateId || !publicKey) {
+        toast.error('Email service configuration is missing. Please check environment variables.', {
+          theme: 'dark',
+          style: {
+            backgroundColor: '#1f2937',
+            color: '#ffffff',
+            border: '1px solid #374151'
+          }
+        });
+        setStatus({ isSubmitting: false });
+        return;
+      }
+
       // Initialize Email.js with public key
       emailjs.init(publicKey);
 
-      // Prepare template parameters
+      // Prepare template parameters (including reCAPTCHA token)
       const templateParams = {
         from_name: formData.fullName,
         from_email: formData.email,
         phone: formData.phone,
         message: formData.message,
-        to_name: 'Intellectra Team', // You can customize this
+        to_name: 'Intellectra Team',
+        recaptcha_token: recaptchaToken, // Include token for server-side verification
       };
 
       // Send email using Email.js
@@ -186,12 +211,12 @@ const ContactForm: React.FC = () => {
           isSubmitting: false
         });
 
-        toast.success('Thank you for contacting us. We\'ll get back to you soon.', {
+        toast.success('Thank you! Your message has been sent successfully. We\'ll get back to you soon.', {
           theme: 'dark',
           style: {
             backgroundColor: '#000',
             color: '#ffffff',
-            border: '1px solid #FFF'
+            border: '1px solid #F59E0B'
           }
         });
 
@@ -205,7 +230,7 @@ const ContactForm: React.FC = () => {
         setErrors({});
       }
     } catch (error) {
-      console.error('Email sending failed:', error);
+      console.error('Form submission failed:', error);
       setStatus({
         isSubmitting: false
       });
@@ -215,7 +240,7 @@ const ContactForm: React.FC = () => {
         style: {
           backgroundColor: '#000',
           color: '#ffffff',
-          border: '1px solid #FFF'
+          border: '1px solid #ef4444'
         }
       });
     }

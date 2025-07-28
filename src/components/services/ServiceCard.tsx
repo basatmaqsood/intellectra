@@ -27,7 +27,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     onButtonClick
 }) => {
     return (
-        <div className={`!border-1 !border-white rounded-[26px] py-28 px-10 sm:py-28.5 sm:px-22.5 md:py-30 md:px-28 lg:py-32 lg:px-32 xl:py-34.5 xl:px-37.5 ${backgroundClass} shadow-lg hover:shadow-xl transition-shadow duration-300 ${className}`}>
+        <div className={`!border-1 !border-white rounded-[26px] py-15 px-5 sm:py-28.5 sm:px-22.5 md:py-30 md:px-28 lg:py-32 lg:px-32 xl:py-34.5 xl:px-37.5 ${backgroundClass} shadow-lg hover:shadow-xl transition-shadow duration-300 ${className}`}>
             {/* Mobile: Icon on top of heading (flex-col) */}
             {/* Tablet/Desktop: Heading first, icon at right */}
             <div className="flex flex-col md:flex-row-reverse md:items-center sm:justify-between mb-6 md:mb-8">

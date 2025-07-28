@@ -257,7 +257,7 @@ const ContactForm: React.FC = () => {
             placeholder="Full Name*"
             value={formData.fullName}
             onChange={handleChange}
-            className={`w-full px-7 py-3 bg-transparent border-2 text-white rounded-lg placeholder-primary-300 focus:outline-none transition-colors body-text ${
+            className={`w-full px-7 py-3 bg-black border-2 text-white rounded-lg placeholder-primary-300 focus:outline-none transition-colors body-text ${
               errors.fullName 
                 ? 'border-red-500 focus:border-red-500' 
                 : 'border-primary-300 focus:border-primary-500'
@@ -278,7 +278,7 @@ const ContactForm: React.FC = () => {
             placeholder="Email*"
             value={formData.email}
             onChange={handleChange}
-            className={`w-full px-7 py-3 bg-transparent border-2 rounded-lg text-white placeholder-primary-300 focus:outline-none transition-colors body-text ${
+            className={`w-full px-7 py-3 bg-black border-2 rounded-lg text-white placeholder-primary-300 focus:outline-none transition-colors body-text ${
               errors.email 
                 ? 'border-red-500 focus:border-red-500' 
                 : 'border-primary-300 focus:border-primary-500'
@@ -299,7 +299,7 @@ const ContactForm: React.FC = () => {
             placeholder="Phone*"
             value={formData.phone}
             onChange={handleChange}
-            className={`w-full px-7 py-3 bg-transparent border-2 rounded-lg text-white placeholder-primary-300 focus:outline-none transition-colors body-text ${
+            className={`w-full px-7 py-3 bg-black border-2 rounded-lg text-white placeholder-primary-300 focus:outline-none transition-colors body-text ${
               errors.phone 
                 ? 'border-red-500 focus:border-red-500' 
                 : 'border-primary-300 focus:border-primary-500'
@@ -319,7 +319,7 @@ const ContactForm: React.FC = () => {
             placeholder="Message*"
             value={formData.message}
             onChange={handleChange}
-            className={`w-full flex-1 min-h-[120px] px-7 py-4 bg-transparent border-2 rounded-lg text-white placeholder-primary-300 focus:outline-none transition-colors resize-none body-text ${
+            className={`w-full flex-1 min-h-[120px] px-7 py-4 bg-black border-2 rounded-lg text-white placeholder-primary-300 focus:outline-none transition-colors resize-none body-text ${
               errors.message 
                 ? 'border-red-500 focus:border-red-500' 
                 : 'border-primary-300 focus:border-primary-500'

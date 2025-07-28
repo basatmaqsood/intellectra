@@ -119,7 +119,7 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
                         </h4>
                         <div className="space-y-3 sm:space-y-4">
                             <div className="flex items-center gap-3">
-                                <a href="/contact" target="_blank" className="body-text-sm text-white hover:text-white/80 transition-colors">
+                                <a href="/contact" className="body-text-sm text-white hover:text-white/80 transition-colors">
                                     Get in Touch
                                 </a>
                             </div>

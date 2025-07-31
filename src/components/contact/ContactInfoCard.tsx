@@ -13,7 +13,7 @@ const ContactInfoCard: React.FC = () => {
           {/* Content */}
           <div className="space-y-4 text-center  text-gray-300 body-text-sm leading-relaxed">
             <p>
-              Discover if <span className="text-primary-300">INTELLECTRA</span> is the right partner for your project with a clear breakdown of our services, pricing, and timelines. Share your project scope to receive tailored insights and technical advice on estimation accuracy or drawing requirements. Learn how we’ve helped contractors win bids and stay on budget — and start a conversation with us today. No pressure, just clarity.
+              Discover if INTELLECTRA is the right partner for your project with a clear breakdown of our services, pricing, and timelines. Share your project scope to receive tailored insights and technical advice on estimation accuracy or drawing requirements. Learn how we’ve helped contractors win bids and stay on budget — and start a conversation with us today. No pressure, just clarity.
             </p>
           </div>
         </div>

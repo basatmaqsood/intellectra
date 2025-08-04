@@ -1,5 +1,6 @@
 import type React from "react"
 import { Icons } from "../assets/icons/icons"
+import { Link } from "react-router-dom"
 
 interface FooterProps {
     className?: string
@@ -14,13 +15,13 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
 
                     {/* Company Info */}
                     <div className="col-span-1 sm:col-span-3 flex flex-col gap-3 sm:gap-4 lg:gap-6 mb-8">
-                        <a href="/">
+                        <Link to="/">
                             <img
                                 src="/images/logo.png"
                                 alt="INTELLECTRA"
                                 className="h-full w-auto"
                             />
-                        </a>
+                        </Link>
                         <div className="">
                             <p className="body-text-sm text-white">
                                 Estimates that Empower,
@@ -59,24 +60,24 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
                         </h4>
                         <nav className="space-y-2">
                             <div>
-                                <a href="/" className="body-text-sm text-white hover:text-white/80 transition-colors">
+                                <Link to="/" className="body-text-sm text-white hover:text-white/80 transition-colors">
                                     Home
-                                </a>
+                                </Link>
                             </div>
                             <div>
-                                <a href="/about" className="body-text-sm text-white hover:text-white/80 transition-colors">
+                                <Link to="/about" className="body-text-sm text-white hover:text-white/80 transition-colors">
                                     About Us
-                                </a>
+                                </Link>
                             </div>
                             <div>
-                                <a href="/services" className="body-text-sm text-white hover:text-white/80 transition-colors">
+                                <Link to="/services" className="body-text-sm text-white hover:text-white/80 transition-colors">
                                     Services
-                                </a>
+                                </Link>
                             </div>
                             <div>
-                                <a href="/case-study/sol-on-park" className="body-text-sm text-white hover:text-white/80 transition-colors">
+                                <Link to="/case-study/sol-on-park" className="body-text-sm text-white hover:text-white/80 transition-colors">
                                     Case Studies
-                                </a>
+                                </Link>
                             </div>
                         </nav>
                     </div>
@@ -90,24 +91,24 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
                         <nav className="space-y-2
                         ">
                             <div>
-                                <a href="#" className="body-text-sm text-white hover:text-white/80 transition-colors">
+                                <span className="body-text-sm text-white hover:text-white/80 transition-colors cursor-default">
                                     MEP Estimation
-                                </a>
+                                </span>
                             </div>
                             <div>
-                                <a href="#" className="body-text-sm text-white hover:text-white/80 transition-colors">
+                                <span className="body-text-sm text-white hover:text-white/80 transition-colors cursor-default">
                                     Electric & IT Estimation
-                                </a>
+                                </span>
                             </div>
                             <div>
-                                <a href="#" className="body-text-sm text-white hover:text-white/80 transition-colors">
+                                <span className="body-text-sm text-white hover:text-white/80 transition-colors cursor-default">
                                     Shop Drawings
-                                </a>
+                                </span>
                             </div>
                             <div>
-                                <a href="#" className="body-text-sm text-white hover:text-white/80 transition-colors">
+                                <span className="body-text-sm text-white hover:text-white/80 transition-colors cursor-default">
                                     Engineering Documents
-                                </a>
+                                </span>
                             </div>
                         </nav>
                     </div>
@@ -119,9 +120,9 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
                         </h4>
                         <div className="space-y-3 sm:space-y-4">
                             <div className="flex items-center gap-3">
-                                <a href="/contact" className="body-text-sm text-white hover:text-white/80 transition-colors">
+                                <Link to="/contact" className="body-text-sm text-white hover:text-white/80 transition-colors">
                                     Get in Touch
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

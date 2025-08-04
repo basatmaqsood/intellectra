@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import ContactForm from './ContactForm';
 import ContactInfoCard from './ContactInfoCard';
 import { Icons } from '../../assets/icons/icons';
@@ -87,7 +88,7 @@ const ContactHero: React.FC = () => {
         }
       `}>
         {/* Logo */}
-        <a href="/" className="text-white text-lg md:text-xl font-bold tracking-wider">
+        <Link to="/" className="text-white text-lg md:text-xl font-bold tracking-wider">
           <img
             src={"/images/logo.png"}
             alt="Logo"
@@ -100,7 +101,7 @@ const ContactHero: React.FC = () => {
             }}
           />
           <span className="hidden">INTELLECTRA</span>
-        </a>
+        </Link>
 
         {/* Hamburger Menu */}
         <button className="text-white" aria-label="Menu" onClick={toggleMenu}>

@@ -35,7 +35,7 @@ const allBlogs: (Blog & { category: string; link: string; alt?: string })[] = [
     date: "April 28, 2025",
     category: "Innovation & Tools",
     link: "",
-    alt: "Tech professionals analyzing circuits, symbolizing the role of data and innovation in construction estimation."
+        alt: "Tech professionals analyzing circuits, symbolizing the role of data and innovation in construction estimation."
   },
   {
     image: "/images/blogListing/blog-4.jpg",

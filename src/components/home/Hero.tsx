@@ -1,5 +1,6 @@
 import type React from "react"
 import { useState, useEffect, useRef } from "react"
+import { Link } from "react-router-dom"
 import { Icons } from "../../assets/icons/icons"
 import Headline from "./AnimatedHeadline"
 import Menubar from "../Menubar"
@@ -172,7 +173,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         }
       `}>
         {/* Logo */}
-        <a href="/" className="text-white text-lg md:text-xl font-bold tracking-wider">
+        <Link to="/" className="text-white text-lg md:text-xl font-bold tracking-wider">
           <img
             src={"/images/logo.png"}
             alt="Logo"
@@ -185,7 +186,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             }}
           />
           <span className="hidden">INTELLECTRA</span>
-        </a>
+        </Link>
 
         {/* Hamburger Menu */}
         <button className="text-white" aria-label="Menu" onClick={toggleMenu}>

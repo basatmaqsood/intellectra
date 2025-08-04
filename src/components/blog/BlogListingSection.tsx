@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import BlogCategorySlider from "./BlogCategorySlider";
 import BlogGrid, { Blog } from "./BlogGrid";
 import { LinkButton } from "../../stories/components/Button";
@@ -48,6 +49,7 @@ const allBlogs: (Blog & { category: string; link: string; alt?: string })[] = [
 ];
 
 const BlogListingSection: React.FC = () => {
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
   const [catIndex, setCatIndex] = useState(0);
 
@@ -74,7 +76,7 @@ const BlogListingSection: React.FC = () => {
   const handleCardClick = (idx: number) => {
     const blog = blogs[idx];
     if (blog && blog.link) {
-      window.location.href = blog.link;
+      navigate(blog.link);
     }
   };
 
